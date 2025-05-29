@@ -3939,91 +3939,7 @@ rule apt_win32_dll_bergard_pgv_pvid_variant
         (uint16(0) == 0x5A4D) and (all of them)
 }
 
-rule ROKRAT_loader : TAU DPRK APT
 
-{
-
-meta:
-
-    author = "CarbonBlack Threat Research" //JMyers
-
-    date = "2018-Jan-11"
-
-    description = "Designed to catch loader observed used with ROKRAT malware"
-    
-    reference = "https://www.carbonblack.com/2018/02/27/threat-analysis-rokrat-malware/"
-
-    rule_version = 1
-
-  	yara_version = "3.7.0"
-
-    TLP = "White"
-
-  	exemplar_hashes = "e1546323dc746ed2f7a5c973dcecc79b014b68bdd8a6230239283b4f775f4bbd"
-
-strings:
-
-	$n1 = "wscript.exe"
-
-	$n2 = "cmd.exe"
-
-	$s1 = "CreateProcess"
-
-	$s2 = "VirtualAlloc"
-
-	$s3 = "WriteProcessMemory"
-
-	$s4 = "CreateRemoteThread"
-
-	$s5 = "LoadResource"
-
-	$s6 = "FindResource"
-
-	$b1 = {33 C9 33 C0 E8 00 00 00 00 5E} //Clear Register, call+5, pop ESI
-
-	$b2 = /\xB9.{3}\x00\x81\xE9?.{3}\x00/ //subtraction for encoded data offset 
-
-  //the above regex could slow down scanning
-
-	$b3 = {03 F1 83 C6 02} //Fix up position
-
-	$b4 = {3E 8A 06 34 90 46} //XOR decode Key
-
-	$b5 = {3E 30 06 46 49 83 F9 00 75 F6} //XOR routine and jmp to code
-
-	//push api hash values plain text
-
-	$hpt_1 = {68 EC 97 03 0C} //api name hash value – Global Alloc
-
-	$hpt_2 = {68 54 CA AF 91} //api name hash value – Virtual Alloc
-
-	$hpt_3 = {68 8E 4E 0E EC} //api name hash value – Load Library
-
-	$hpt_4 = {68 AA FC 0D 7C} //api name hash value – GetProc Addr
-
-	$hpt_5 = {68 1B C6 46 79} //api name hash value – Virtual Protect
-
-	$hpt_6 = {68 F6 22 B9 7C} //api name hash value – Global Free
-
-	//push api hash values encoded XOR 0x13
-
-	$henc_1 = {7B FF 84 10 1F} //api name hash value – Global Alloc
-
-	$henc_2 = {7B 47 D9 BC 82} //api name hash value – Virtual Alloc
-
-	$henc_3 = {7B 9D 5D 1D EC} //api name hash value – Load Library
-
-	$henc_4 = {7B B9 EF 1E 6F} //api name hash value – GetProc Addr
-
-	$henc_5 = {7B 08 D5 55 6A} //api name hash value – Virtual Protect
-
-	$henc_6 = {7B E5 31 AA 6F} //api name hash value – Global Free
-
-condition:
-
-	(1 of ($n*) and 4 of ($s*) and 4 of ($b*)) or all of ($hpt*) or all of ($henc*)
-
-}
 
 
 rule ROKRAT_payload : TAU DPRK APT
@@ -5195,21 +5111,6 @@ rule EquationGroup_estesfox {
       all of them
 }
 
-rule EquationGroup_elatedmonkey_1_0_1_1 {
-   meta:
-      description = "Equation Group hack tool leaked by ShadowBrokers- file elatedmonkey.1.0.1.1.sh"
-      author = "Florian Roth"
-      reference = "https://medium.com/@shadowbrokerss/dont-forget-your-base-867d304a94b1"
-      date = "2017-04-08"
-      hash1 = "bf7a9dce326604f0681ca9f7f1c24524543b5be8b6fcc1ba427b18e2a4ff9090"
-   strings:
-      $x3 = "Usage: $0 ( -s IP PORT | CMD )" fullword ascii
-      $s5 = "os.execl(\"/bin/sh\", \"/bin/sh\", \"-c\", \"$CMD\")" fullword ascii
-      $s13 = "PHP_SCRIPT=\"$HOME/public_html/info$X.php\"" fullword ascii
-      $s15 = "cat > /dev/tcp/127.0.0.1/80 <<END" fullword ascii
-   condition:
-      ( uint16(0) == 0x2123 and filesize < 5KB and ( 1 of ($x*) and 5 of ($s*) ) ) or ( all of them )
-}
 
 rule EquationGroup_scanner {
    meta:
@@ -13591,4 +13492,1679 @@ rule keyboy_init_config_section
         //MZ header //PE signature //Payloads are normally smaller but the new dropper we spotted //is a bit larger. //Observed virtual sizes of the .Init section vary but they've //always been 1024, 2048, or 4096 bytes.
         uint16(0) == 0x5A4D and uint32(uint32(0x3C)) == 0x00004550 and filesize < 300KB and for any i in (0..pe.number_of_sections - 1): (pe.sections[i].name == ".Init" and pe.sections[i].virtual_size % 1024 == 0)
 }
-/*APT_KeyBoy.yar Loaded*/
+
+rule EliseLotusBlossom
+{
+
+meta:
+    author = "Jose Ramon Palanco"
+    date = "2015-06-23"
+    description = "Elise Backdoor Trojan"
+    ref = "https://www.paloaltonetworks.com/resources/research/unit42-operation-lotus-blossom.html"
+
+strings:
+    $magic = { 4d 5a }
+    $s1 = "\",Update" wide
+    $s2 = "LoaderDLL.dll"
+    $s3 = "Kernel32.dll"
+    $s4 = "{5947BACD-63BF-4e73-95D7-0C8A98AB95F2}"
+    $s5 = "\\Network\\" wide
+    $s6 = "0SSSSS"
+    $s7 = "441202100205"
+    $s8 = "0WWWWW"
+
+condition:
+    $magic at 0 and all of ($s*)    
+}
+
+
+rule MiniDionis_readerView 
+{
+
+    meta:
+        description = "MiniDionis Malware - file readerView.exe / adobe.exe"
+        author = "Florian Roth"
+        reference = "http://www.kernelmode.info/forum/viewtopic.php?f=16&t=3950"
+        date = "2015-07-20"
+        /* Original Hash */
+        hash1 = "ee5eb9d57c3611e91a27bb1fc2d0aaa6bbfa6c69ab16e65e7123c7c49d46f145"
+        /* Derived Samples */
+        hash2 = "a713982d04d2048a575912a5fc37c93091619becd5b21e96f049890435940004"
+        hash3 = "88a40d5b679bccf9641009514b3d18b09e68b609ffaf414574a6eca6536e8b8f"
+        hash4 = "97d8725e39d263ed21856477ed09738755134b5c0d0b9ae86ebb1cdd4cdc18b7"
+        hash5 = "ed7abf93963395ce9c9cba83a864acb4ed5b6e57fd9a6153f0248b8ccc4fdb46"
+        hash6 = "56ac764b81eb216ebed5a5ad38e703805ba3e1ca7d63501ba60a1fb52c7ebb6e"
+
+    strings:
+        $s1 = "%ws_out%ws" fullword wide /* score: '8.00' */
+        $s2 = "dnlibsh" fullword ascii /* score: '7.00' */
+
+        $op0 = { 0f b6 80 68 0e 41 00 0b c8 c1 e1 08 0f b6 c2 8b } /* Opcode */
+        $op1 = { 8b ce e8 f8 01 00 00 85 c0 74 41 83 7d f8 00 0f } /* Opcode */
+        $op2 = { e8 2f a2 ff ff 83 20 00 83 c8 ff 5f 5e 5d c3 55 } /* Opcode */
+
+    condition:
+        uint16(0) == 0x5a4d and filesize < 500KB and all of ($s*) and 1 of ($op*)
+}
+
+/* Related - SFX files or packed files with typical malware content -------- */
+
+rule Malicious_SFX1 
+{
+
+    meta:
+        description = "SFX with voicemail content"
+        author = "Florian Roth"
+        reference = "http://www.kernelmode.info/forum/viewtopic.php?f=16&t=3950"
+        date = "2015-07-20"
+        hash = "c0675b84f5960e95962d299d4c41511bbf6f8f5f5585bdacd1ae567e904cb92f"
+   
+    strings:
+        $s0 = "voicemail" ascii /* PEStudio Blacklist: strings */ /* score: '30.00' */
+        $s1 = ".exe" ascii
+   
+    condition:
+        uint16(0) == 0x4b50 and filesize < 1000KB and $s0 in (3..80) and $s1 in (3..80) 
+}
+
+rule Malicious_SFX2 
+{
+
+    meta:
+        description = "SFX with adobe.exe content"
+        author = "Florian Roth"
+        reference = "http://www.kernelmode.info/forum/viewtopic.php?f=16&t=3950"
+        date = "2015-07-20"
+        hash = "502e42dc99873c52c3ca11dd3df25aad40d2b083069e8c22dd45da887f81d14d"
+
+    strings:
+        $s1 = "adobe.exe" fullword ascii /* PEStudio Blacklist: strings */ /* score: '27.00' */
+        $s2 = "Extracting files to %s folder$Extracting files to temporary folder" fullword wide /* PEStudio Blacklist: strings */ /* score: '26.00' */
+        $s3 = "GETPASSWORD1" fullword wide /* PEStudio Blacklist: strings */ /* score: '23.00' */
+
+    condition:
+        uint16(0) == 0x5a4d and filesize < 1000KB and all of them
+}
+
+rule MiniDionis_VBS_Dropped 
+{
+
+    meta:
+        description = "Dropped File - 1.vbs"
+        author = "Florian Roth"
+        reference = "https://malwr.com/analysis/ZDc4ZmIyZDI4MTVjNGY5NWI0YzE3YjIzNGFjZTcyYTY/"
+        date = "2015-07-21"
+        hash = "97dd1ee3aca815eb655a5de9e9e8945e7ba57f458019be6e1b9acb5731fa6646"
+
+    strings:
+        $s1 = "Wscript.Sleep 5000" ascii
+        $s2 = "Set FSO = CreateObject(\"Scripting.FileSystemObject\")" ascii
+        $s3 = "Set WshShell = CreateObject(\"WScript.Shell\")" ascii
+        $s4 = "If(FSO.FileExists(\"" ascii
+        $s5 = "then FSO.DeleteFile(\".\\" ascii
+
+    condition:
+        filesize < 1KB and all of them and $s1 in (0..40)
+}
+
+
+rule MirageStrings
+{
+    meta:
+        description = "Mirage Identifying Strings"
+        author = "Seth Hardy"
+        last_modified = "2014-06-25"
+        
+    strings:
+        $ = "Neo,welcome to the desert of real." wide ascii
+        $ = "/result?hl=en&id=%s"
+        
+    condition:
+       any of them
+}
+
+rule Mirage
+{
+    meta:
+        description = "Mirage"
+        author = "Seth Hardy"
+        last_modified = "2014-06-25"
+        
+    condition:
+        MirageStrings
+}
+
+rule Mirage_APT
+{
+    meta:
+        Author      = "Silas Cutler"
+        Date        = "yyyy/mm/dd"
+        Description = "Malware related to APT campaign"
+        Reference   = "Useful link"
+    
+    strings:
+        $a1 = "welcome to the desert of the real"
+        $a2 = "Mirage"
+        $b = "Encoding: gzip"
+        $c = /\/[A-Za-z]*\?hl=en/
+
+    condition: 
+        (($a1 or $a2) or $b) and $c
+}
+
+
+rule Molerats_certs
+{
+    
+    meta:
+        Author      = "FireEye Labs"
+        Date        = "2013/08/23"
+        Description = "this rule detections code signed with certificates used by the Molerats actor"
+        Reference   = "https://www.fireeye.com/blog/threat-research/2013/08/operation-molerats-middle-east-cyber-attacks-using-poison-ivy.html"
+
+    strings:
+        $cert1 = { 06 50 11 A5 BC BF 83 C0 93 28 16 5E 7E 85 27 75 }
+        $cert2 = { 03 e1 e1 aa a5 bc a1 9f ba 8c 42 05 8b 4a bf 28 }
+        $cert3 = { 0c c0 35 9c 9c 3c da 00 d7 e9 da 2d c6 ba 7b 6d }
+
+    condition:
+        1 of ($cert*)
+}
+
+
+rule Backdoor_APT_Mongal
+{
+
+    meta:
+        author = "@patrickrolsen"
+        maltype = "Backdoor.APT.Mongall"
+        version = "0.1"
+        reference = "fd69a799e21ccb308531ce6056944842" 
+        date = "01/04/2014"
+    
+    strings:
+        $author  = "author user"
+        $title   = "title Vjkygdjdtyuj" nocase
+        $comp    = "company ooo"
+        $cretime = "creatim\\yr2012\\mo4\\dy19\\hr15\\min10"
+        $passwd  = "password 00000000"
+    
+    condition:
+        all of them
+}
+
+rule MongalCode
+{
+    meta:
+        description = "Mongal code features"
+        author = "Seth Hardy"
+        last_modified = "2014-07-15"
+    
+    strings:
+        // gettickcount value checking
+        $ = { 8B C8 B8 D3 4D 62 10 F7 E1 C1 EA 06 2B D6 83 FA 05 76 EB }
+        
+    condition:
+        any of them
+}
+
+rule MongalStrings
+{
+    
+    meta:
+        description = "Mongal Identifying Strings"
+        author = "Seth Hardy"
+        last_modified = "2014-07-15"
+        
+    strings:
+        $ = "NSCortr.dll"
+        $ = "NSCortr1.dll"
+        $ = "Sina.exe"
+        
+    condition:
+        any of them
+}
+
+rule Mongal 
+{
+    
+    meta:
+        description = "Mongal"
+        author = "Seth Hardy"
+        last_modified = "2014-07-15"
+        
+    condition:
+        MongalCode or MongalStrings
+}
+
+
+
+rule apt_RU_MoonlightMaze_customlokitools {
+
+meta:
+	
+	author = "Kaspersky Lab"
+	date = "2017-03-15"
+	version = "1.1"
+	last_modified = "2017-03-22"
+	reference = "https://en.wikipedia.org/wiki/Moonlight_Maze"
+	description = "Rule to detect Moonlight Maze Loki samples by custom attacker-authored strings"
+	hash = "14cce7e641d308c3a177a8abb5457019"
+	hash = "a3164d2bbc45fb1eef5fde7eb8b245ea"
+	hash = "dabee9a7ea0ddaf900ef1e3e166ffe8a"
+	hash = "1980958afffb6a9d5a6c73fc1e2795c2"
+	hash = "e59f92aadb6505f29a9f368ab803082e"
+
+strings:
+
+	$a1="Write file Ok..." ascii wide 
+	$a2="ERROR: Can not open socket...." ascii wide
+	$a3="Error in parametrs:"  ascii wide
+	$a4="Usage: @<get/put> <IP> <PORT> <file>"  ascii wide
+	$a5="ERROR: Not connect..."  ascii wide
+	$a6="Connect successful...."  ascii wide
+	$a7="clnt <%d> rqstd n ll kll"  ascii wide
+	$a8="clnt <%d> rqstd swap"  ascii wide
+	$a9="cld nt sgnl prcs grp" ascii wide
+	$a10="cld nt sgnl prnt" ascii wide
+
+	//keeping only ascii version of string ->
+	$a11="ork error" ascii fullword
+
+condition:
+
+	((any of ($a*)))
+
+}
+
+
+rule apt_RU_MoonlightMaze_customsniffer {
+
+meta:
+	
+	author = "Kaspersky Lab"
+	date = "2017-03-15"
+	version = "1.1"
+	reference = "https://en.wikipedia.org/wiki/Moonlight_Maze"
+	description = "Rule to detect Moonlight Maze sniffer tools"
+	hash = "7b86f40e861705d59f5206c482e1f2a5"
+	hash = "927426b558888ad680829bd34b0ad0e7"
+	original_filename = "ora;tdn"
+	
+strings:
+
+
+	//strings from ora ->
+	$a1="/var/tmp/gogo" fullword
+	$a2="myfilename= |%s|" fullword
+	$a3="mypid,mygid=" fullword
+	$a4="mypid=|%d| mygid=|%d|" fullword
+
+	//strings from tdn ->
+	$a5="/var/tmp/task" fullword
+	$a6="mydevname= |%s|" fullword
+
+condition:
+
+	((any of ($a*)))
+
+}
+
+
+rule loki2crypto {
+
+meta:
+	
+	author = "Costin Raiu, Kaspersky Lab"
+	date = "2017-03-21"
+	version = "1.0"
+	description = "Rule to detect hardcoded DH modulus used in 1996/1997 Loki2 sourcecode; #ifdef STRONG_CRYPTO /* 384-bit strong prime */"
+	reference = "https://en.wikipedia.org/wiki/Moonlight_Maze"
+	hash = "19fbd8cbfb12482e8020a887d6427315"
+	hash = "ea06b213d5924de65407e8931b1e4326"
+	hash = "14ecd5e6fc8e501037b54ca263896a11"
+	hash = "e079ec947d3d4dacb21e993b760a65dc"
+	hash = "edf900cebb70c6d1fcab0234062bfc28"
+
+strings:
+
+	$modulus={DA E1 01 CD D8 C9 70 AF C2 E4 F2 7A 41 8B 43 39 52 9B 4B 4D E5 85 F8 49}
+
+condition:
+
+	(any of them)
+
+}
+
+
+
+
+rule apt_RU_MoonlightMaze_de_tool {
+
+meta:
+	
+	author = "Kaspersky Lab"
+	date = "2017-03-27"
+	version = "1.0"
+	last_modified = "2017-03-27"
+	reference = "https://en.wikipedia.org/wiki/Moonlight_Maze"
+	description = "Rule to detect Moonlight Maze 'de' and 'deg' tunnel tool"
+	hash = "4bc7ed168fb78f0dc688ee2be20c9703"
+	hash = "8b56e8552a74133da4bc5939b5f74243"
+
+strings:
+
+	$a1="Vnuk: %d" ascii fullword
+	$a2="Syn: %d" ascii fullword
+
+	//%s\r%s\r%s\r%s\r ->
+	$a3={25 73 0A 25 73 0A 25 73 0A 25 73 0A}
+
+condition:
+
+	((2 of ($a*)))
+
+}
+
+
+rule apt_RU_MoonlightMaze_cle_tool {
+
+meta:
+	
+	author = "Kaspersky Lab"
+	date = "2017-03-27"
+	version = "1.0"
+	last_modified = "2017-03-27"
+	reference = "https://en.wikipedia.org/wiki/Moonlight_Maze"
+	description = "Rule to detect Moonlight Maze 'cle' log cleaning tool"
+	hash = "647d7b711f7b4434145ea30d0ef207b0"
+
+	
+strings:
+
+	$a1="./a filename template_file" ascii wide
+	$a2="May be %s is empty?"  ascii wide
+	$a3="template string = |%s|"   ascii wide
+	$a4="No blocks !!!"
+	$a5="No data in this block !!!!!!"  ascii wide
+	$a6="No good line"
+
+condition:
+
+	((3 of ($a*)))
+
+}
+
+
+rule apt_RU_MoonlightMaze_xk_keylogger {
+
+meta:
+	
+	author = "Kaspersky Lab"
+	date = "2017-03-27"
+	version = "1.0"
+	last_modified = "2017-03-27"
+	reference = "https://en.wikipedia.org/wiki/Moonlight_Maze"
+	description = "Rule to detect Moonlight Maze 'xk' keylogger"
+
+strings:
+
+	$a1="Log ended at => %s"
+	$a2="Log started at => %s [pid %d]"
+	$a3="/var/tmp/task" fullword
+	$a4="/var/tmp/taskhost" fullword
+	$a5="my hostname: %s"
+	$a6="/var/tmp/tasklog"
+	$a7="/var/tmp/.Xtmp01" fullword
+	$a8="myfilename=-%s-"
+	$a9="/var/tmp/taskpid"
+	$a10="mypid=-%d-" fullword
+	$a11="/var/tmp/taskgid" fullword
+	$a12="mygid=-%d-" fullword
+
+
+condition:
+
+	((3 of ($a*)))
+
+}
+
+rule apt_RU_MoonlightMaze_encrypted_keylog {
+
+meta:
+	
+	author = "Kaspersky Lab"
+	date = "2017-03-27"
+	version = "1.0"
+	last_modified = "2017-03-27"
+	reference = "https://en.wikipedia.org/wiki/Moonlight_Maze"
+	description = "Rule to detect Moonlight Maze encrypted keylogger logs"
+
+strings:
+
+	$a1={47 01 22 2A 6D 3E 39 2C}
+
+condition:
+
+	($a1 at 0)
+
+}
+
+rule apt_RU_MoonlightMaze_IRIX_exploit_GEN {
+
+meta:
+	
+	author = "Kaspersky Lab"
+	date = "2017-03-27"
+	version = "1.0"
+	last_modified = "2017-03-27"
+	reference = "https://en.wikipedia.org/wiki/Moonlight_Maze"
+	description = "Rule to detect Irix exploits from David Hedley used by Moonlight Maze hackers"
+	reference2 = "https://www.exploit-db.com/exploits/19274/"
+	hash = "008ea82f31f585622353bd47fa1d84be" //df3
+	hash = "a26bad2b79075f454c83203fa00ed50c" //log
+	hash = "f67fc6e90f05ba13f207c7fdaa8c2cab" //xconsole
+	hash = "5937db3896cdd8b0beb3df44e509e136" //xlock
+	hash = "f4ed5170dcea7e5ba62537d84392b280" //xterm
+
+strings:
+
+	$a1="stack = 0x%x, targ_addr = 0x%x"
+	$a2="execl failed"
+
+condition:
+
+	(uint32(0)==0x464c457f) and (all of them)
+
+}
+
+
+rule apt_RU_MoonlightMaze_u_logcleaner {
+
+meta:
+	
+	author = "Kaspersky Lab"
+	date = "2017-03-27"
+	version = "1.0"
+	last_modified = "2017-03-27"
+	reference = "https://en.wikipedia.org/wiki/Moonlight_Maze"
+	description = "Rule to detect log cleaners based on utclean.c"
+	reference2 = "http://cd.textfiles.com/cuteskunk/Unix-Hacking-Exploits/utclean.c"
+	hash = "d98796dcda1443a37b124dbdc041fe3b"
+	hash = "73a518f0a73ab77033121d4191172820"
+
+strings:
+
+	$a1="Hiding complit...n"
+	$a2="usage: %s <username> <fixthings> [hostname]"
+	$a3="ls -la %s* ; /bin/cp  ./wtmp.tmp %s; rm  ./wtmp.tmp"
+
+condition:
+
+	(uint32(0)==0x464c457f) and (any of them)
+
+}
+
+
+rule apt_RU_MoonlightMaze_wipe {
+
+meta:
+	
+	author = "Kaspersky Lab"
+	date = "2017-03-27"
+	version = "1.0"
+	last_modified = "2017-03-27"
+	reference = "https://en.wikipedia.org/wiki/Moonlight_Maze"
+	description = "Rule to detect log cleaner based on wipe.c"
+	reference2 = "http://www.afn.org/~afn28925/wipe.c"
+	hash = "e69efc504934551c6a77b525d5343241"
+
+strings:
+
+	$a1="ERROR: Unlinking tmp WTMP file."
+	$a2="USAGE: wipe [ u|w|l|a ] ...options..."
+	$a3="Erase acct entries on tty :   wipe a [username] [tty]"
+	$a4="Alter lastlog entry       :   wipe l [username] [tty] [time] [host]"
+
+condition:
+
+	(uint32(0)==0x464c457f) and (2 of them)
+
+}
+
+
+rule APT_NGO_wuaclt
+{
+   
+   meta:
+    author = "AlienVault Labs"
+  
+  strings:
+    $a = "%%APPDATA%%\\Microsoft\\wuauclt\\wuauclt.dat"
+    $b = "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1)"
+    $c = "/news/show.asp?id%d=%d"
+    
+    $d = "%%APPDATA%%\\Microsoft\\wuauclt\\"
+    $e = "0l23kj@nboxu"
+    
+    $f = "%%s.asp?id=%%d&Sid=%%d"
+    $g = "User-Agent: Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SP Q%%d)"
+    $h = "Cookies: UseID=KGIOODAOOK%%s"
+
+  condition:
+    ($a and $b and $c) or ($d and $e) or ($f and $g and $h)
+}
+
+rule APT_NGO_wuaclt_PDF
+{
+        meta:
+            author = "AlienVault Labs"
+
+    strings:
+        $pdf  = "%PDF" nocase
+        $comment = {3C 21 2D 2D 0D 0A 63 57 4B 51 6D 5A 6C 61 56 56 56 56 56 56 56 56 56 56 56 56 56 63 77 53 64 63 6A 4B 7A 38 35 6D 37 4A 56 6D 37 4A 46 78 6B 5A 6D 5A 6D 52 44 63 5A 58 41 73 6D 5A 6D 5A 7A 42 4A 31 79 73 2F 4F 0D 0A}
+    
+    condition:
+        $pdf at 0 and $comment in (0..200)
+}
+
+
+rule OilRig_Malware_Campaign_Gen1 
+{
+
+   meta:
+      description = "Detects malware from OilRig Campaign"
+      author = "Florian Roth"
+      reference = "https://goo.gl/QMRZ8K"
+      date = "2016-10-12"
+      hash1 = "d808f3109822c185f1d8e1bf7ef7781c219dc56f5906478651748f0ace489d34"
+      hash2 = "80161dad1603b9a7c4a92a07b5c8bce214cf7a3df897b561732f9df7920ecb3e"
+      hash3 = "662c53e69b66d62a4822e666031fd441bbdfa741e20d4511c6741ec3cb02475f"
+      hash4 = "903b6d948c16dc92b69fe1de76cf64ab8377893770bf47c29bf91f3fd987f996"
+      hash5 = "c4fbc723981fc94884f0f493cb8711fdc9da698980081d9b7c139fcffbe723da"
+      hash6 = "57efb7596e6d9fd019b4dc4587ba33a40ab0ca09e14281d85716a253c5612ef4"
+      hash7 = "1b2fee00d28782076178a63e669d2306c37ba0c417708d4dc1f751765c3f94e1"
+      hash8 = "9f31a1908afb23a1029c079ee9ba8bdf0f4c815addbe8eac85b4163e02b5e777"
+      hash9 = "0cd9857a3f626f8e0c07495a4799c59d502c4f3970642a76882e3ed68b790f8e"
+      hash10 = "4b5112f0fb64825b879b01d686e8f4d43521252a3b4f4026c9d1d76d3f15b281"
+      hash11 = "4e5b85ea68bf8f2306b6b931810ae38c8dff3679d78da1af2c91032c36380353"
+      hash12 = "c3c17383f43184a29f49f166a92453a34be18e51935ddbf09576a60441440e51"
+      hash13 = "f3856c7af3c9f84101f41a82e36fc81dfc18a8e9b424a3658b6ba7e3c99f54f2"
+      hash14 = "0c64ab9b0c122b1903e8063e3c2c357cbbee99de07dc535e6c830a0472a71f39"
+      hash15 = "d874f513a032ccb6a5e4f0cd55862b024ea0bee4de94ccf950b3dd894066065d"
+      hash16 = "8ee628d46b8af20c4ba70a2fe8e2d4edca1980583171b71fe72455c6a52d15a9"
+      hash17 = "55d0e12439b20dadb5868766a5200cbbe1a06053bf9e229cf6a852bfcf57d579"
+      hash18 = "528d432952ef879496542bc62a5a4b6eee788f60f220426bd7f933fa2c58dc6b"
+      hash19 = "93940b5e764f2f4a2d893bebef4bf1f7d63c4db856877020a5852a6647cb04a0"
+      hash20 = "e2ec7fa60e654f5861e09bbe59d14d0973bd5727b83a2a03f1cecf1466dd87aa"
+      hash21 = "9c0a33a5dc62933f17506f20e0258f877947bdcd15b091a597eac05d299b7471"
+      hash22 = "a787c0e42608f9a69f718f6dca5556607be45ec77d17b07eb9ea1e0f7bb2e064"
+      hash23 = "3772d473a2fe950959e1fd56c9a44ec48928f92522246f75f4b8cb134f4713ff"
+      hash24 = "3986d54b00647b507b2afd708b7a1ce4c37027fb77d67c6bc3c20c3ac1a88ca4"
+      hash25 = "f5a64de9087b138608ccf036b067d91a47302259269fb05b3349964ca4060e7e"
+
+   strings:
+      $x1 = "Get-Content $env:Public\\Libraries\\update.vbs) -replace" ascii
+      $x2 = "wss.Run \"powershell.exe \" & Chr(34) & \"& {waitfor haha /T 2}\" & Chr(34), 0" fullword ascii
+      $x3 = "Call Extract(UpdateVbs, wss.ExpandEnvironmentStrings(\"%PUBLIC%\") & \"\\Libraries\\update.vbs\")" fullword ascii
+      $s4 = "CreateObject(\"WScript.Shell\").Run cmd, 0o" fullword ascii
+      /* Base64 encode config */
+      /* $global:myhost = */
+      $b1 = "JGdsb2JhbDpteWhvc3QgP" ascii
+      /* HOME="%public%\Libraries\" */
+      $b2 = "SE9NRT0iJXB1YmxpYyVcTGlicmFyaWVzX" ascii
+      /* Set wss = CreateObject("wScript.Shell") */
+      $b3 = "U2V0IHdzcyA9IENyZWF0ZU9iamVjdCgid1NjcmlwdC5TaGV" ascii
+      /* $scriptdir = Split-Path -Parent -Path $ */
+      $b4 = "JHNjcmlwdGRpciA9IFNwbGl0LVBhdGggLVBhcmVudCAtUGF0aCA" ascii
+      /* \x0aSet wss = CreateObject("wScript.Shell") */
+      $b5 = "DQpTZXQgd3NzID0gQ3JlYXRlT2JqZWN" ascii
+      /* whoami & hostname */
+      $b6 = "d2hvYW1pICYgaG9zdG5hb" ascii
+ 
+   condition:
+      ( uint16(0) == 0xcfd0 and filesize < 700KB and 1 of them )
+}
+
+rule OilRig_Malware_Campaign_Mal1 
+{
+
+   meta:
+      description = "Detects malware from OilRig Campaign"
+      author = "Florian Roth"
+      reference = "https://goo.gl/QMRZ8K"
+      date = "2016-10-12"
+      hash1 = "e17e1978563dc10b73fd54e7727cbbe95cc0b170a4e7bd0ab223e059f6c25fcc"
+
+   strings:
+      $x1 = "DownloadExecute=\"powershell \"\"&{$r=Get-Random;$wc=(new-object System.Net.WebClient);$wc.DownloadFile(" ascii
+      $x2 = "-ExecutionPolicy Bypass -File \"&HOME&\"dns.ps1\"" fullword ascii
+      $x3 = "CreateObject(\"WScript.Shell\").Run Replace(DownloadExecute,\"-_\",\"bat\")" fullword ascii
+      $x4 = "CreateObject(\"WScript.Shell\").Run DnsCmd,0" fullword ascii
+      $s1 = "http://winodwsupdates.me" ascii
+
+   condition:
+      ( uint16(0) == 0x4f48 and filesize < 4KB and 1 of them ) or ( 2 of them )
+}
+
+rule OilRig_Malware_Campaign_Gen2 
+{
+
+   meta:
+      description = "Detects malware from OilRig Campaign"
+      author = "Florian Roth"
+      reference = "https://goo.gl/QMRZ8K"
+      date = "2016-10-12"
+      hash1 = "c6437f57a8f290b5ec46b0933bfa8a328b0cb2c0c7fbeea7f21b770ce0250d3d"
+      hash2 = "293522e83aeebf185e653ac279bba202024cedb07abc94683930b74df51ce5cb"
+
+   strings:
+      $s1 = "%userprofile%\\AppData\\Local\\Microsoft\\ " fullword ascii
+      $s2 = "$fdn=[System.Text.Encoding]::UTF8.GetString([System.Convert]::FromBase64String('" fullword ascii
+      $s3 = "&{$rn = Get-Random; $id = 'TR" fullword ascii
+      $s4 = "') -replace '__',('DNS'+$id) | " fullword ascii
+      $s5 = "\\upd.vbs" fullword ascii
+      $s6 = "schtasks /create /F /sc minute /mo " fullword ascii
+      $s7 = "') -replace '__',('HTP'+$id) | " fullword ascii
+      $s8 = "&{$rn = Get-Random -minimum 1 -maximum 10000; $id = 'AZ" fullword ascii
+      $s9 = "http://www.israirairlines.com/?mode=page&page=14635&lang=eng<" fullword ascii
+
+   condition:
+      ( uint16(0) == 0xcfd0 and filesize < 4000KB and 2 of ($s*) ) or ( 4 of them )
+}
+
+rule OilRig_Malware_Campaign_Gen3 
+{
+
+   meta:
+      description = "Detects malware from OilRig Campaign"
+      author = "Florian Roth"
+      reference = "https://goo.gl/QMRZ8K"
+      date = "2016-10-12"
+      hash1 = "5e9ddb25bde3719c392d08c13a295db418d7accd25d82d020b425052e7ba6dc9"
+      hash2 = "bd0920c8836541f58e0778b4b64527e5a5f2084405f73ee33110f7bc189da7a9"
+      hash3 = "90639c7423a329e304087428a01662cc06e2e9153299e37b1b1c90f6d0a195ed"
+
+   strings:
+      $x1 = "source code from https://www.fireeye.com/blog/threat-research/2016/05/targeted_attacksaga.htmlrrrr" fullword ascii
+      $x2 = "\\Libraries\\fireueye.vbs" fullword ascii
+      $x3 = "\\Libraries\\fireeye.vbs&" fullword wide
+
+   condition:
+      ( uint16(0) == 0xcfd0 and filesize < 100KB and 1 of them )
+}
+
+rule OilRig_Malware_Campaign_Mal2 
+{
+
+   meta:
+      description = "Detects malware from OilRig Campaign"
+      author = "Florian Roth"
+      reference = "https://goo.gl/QMRZ8K"
+      date = "2016-10-12"
+      hash1 = "65920eaea00764a245acb58a3565941477b78a7bcc9efaec5bf811573084b6cf"
+
+   strings:
+      $x1 = "wss.Run \"powershell.exe \" & Chr(34) & \"& {(Get-Content $env:Public\\Libraries\\update.vbs) -replace '__',(Get-Random) | Set-C" ascii
+      $x2 = "Call Extract(UpdateVbs, wss.ExpandEnvironmentStrings(\"%PUBLIC%\") & \"\\Libraries\\update.vbs\")" fullword ascii
+      $x3 = "mailto:Mohammed.sarah@gratner.com" fullword wide
+      $x4 = "mailto:Tarik.Imam@gartner.com" fullword wide
+      $x5 = "Call Extract(DnsPs1, wss.ExpandEnvironmentStrings(\"%PUBLIC%\") & \"\\Libraries\\dns.ps1\")" fullword ascii
+      $x6 = "2dy53My5vcmcvMjAw" fullword wide /* base64 encoded string 'w.w3.org/200' */
+
+   condition:
+      ( uint16(0) == 0xcfd0 and filesize < 200KB and 1 of them )
+}
+
+rule OilRig_Campaign_Reconnaissance 
+{
+
+   meta:
+      description = "Detects Windows discovery commands - known from OilRig Campaign"
+      author = "Florian Roth"
+      reference = "https://goo.gl/QMRZ8K"
+      date = "2016-10-12"
+      hash1 = "5893eae26df8e15c1e0fa763bf88a1ae79484cdb488ba2fc382700ff2cfab80c"
+
+   strings:
+      $s1 = "whoami & hostname & ipconfig /all" ascii
+      $s2 = "net user /domain 2>&1 & net group /domain 2>&1" ascii
+      $s3 = "net group \"domain admins\" /domain 2>&1 & " ascii
+
+   condition:
+      ( filesize < 1KB and 1 of them )
+}
+
+rule OilRig_Malware_Campaign_Mal3 
+{
+
+   meta:
+      description = "Detects malware from OilRig Campaign"
+      author = "Florian Roth"
+      reference = "https://goo.gl/QMRZ8K"
+      date = "2016-10-12"
+      hash1 = "02226181f27dbf59af5377e39cf583db15200100eea712fcb6f55c0a2245a378"
+
+   strings:
+      $x1 = "(Get-Content $env:Public\\Libraries\\dns.ps1) -replace ('#'+'##'),$botid | Set-Content $env:Public\\Libraries\\dns.ps1" fullword ascii
+      $x2 = "Invoke-Expression ($global:myhome+'tp\\'+$global:filename+'.bat > '+$global:myhome+'tp\\'+$global:filename+'.txt')" fullword ascii
+      $x3 = "('00000000'+(convertTo-Base36(Get-Random -Maximum 46655)))" fullword ascii
+
+   condition:
+      ( filesize < 10KB and 1 of them )
+}
+
+rule OpClandestineWolf 
+{
+ 
+   meta:
+        alert_severity = "HIGH"
+        log = "false"
+        author = "NDF"
+        weight = 10
+        alert = true
+        source = " https://www.fireeye.com/blog/threat-research/2015/06/operation-clandestine-wolf-adobe-flash-zero-day.html"
+        version = 1
+        date = "2015-06-23"
+        description = "Operation Clandestine Wolf signature based on OSINT from 06.23.15"
+        hash0 = "1a4b710621ef2e69b1f7790ae9b7a288"
+        hash1 = "917c92e8662faf96fffb8ffe7b7c80fb"
+        hash2 = "975b458cb80395fa32c9dda759cb3f7b"
+        hash3 = "3ed34de8609cd274e49bbd795f21acc4"
+        hash4 = "b1a55ec420dd6d24ff9e762c7b753868"
+        hash5 = "afd753a42036000ad476dcd81b56b754"
+        hash6 = "fad20abf8aa4eda0802504d806280dd7"
+        hash7 = "ab621059de2d1c92c3e7514e4b51751a"
+        hash8 = "510b77a4b075f09202209f989582dbea"
+        hash9 = "d1b1abfcc2d547e1ea1a4bb82294b9a3"
+        hash10 = "4692337bf7584f6bda464b9a76d268c1"
+        hash11 = "7cae5757f3ba9fef0a22ca0d56188439"
+        hash12 = "1a7ba923c6aa39cc9cb289a17599fce0"
+        hash13 = "f86db1905b3f4447eb5728859f9057b5"
+        hash14 = "37c6d1d3054e554e13d40ea42458ebed"
+        hash15 = "3e7430a09a44c0d1000f76c3adc6f4fa"
+        hash16 = "98eb249e4ddc4897b8be6fe838051af7"
+        hash17 = "1b57a7fad852b1d686c72e96f7837b44"
+        hash18 = "ffb84b8561e49a8db60e0001f630831f"
+        hash19 = "98eb249e4ddc4897b8be6fe838051af7"
+        hash20 = "dfb4025352a80c2d81b84b37ef00bcd0"
+        hash21 = "4457e89f4aec692d8507378694e0a3ba"
+        hash22 = "48de562acb62b469480b8e29821f33b8"
+        hash23 = "7a7eed9f2d1807f55a9308e21d81cccd"
+        hash24 = "6817b29e9832d8fd85dcbe4af176efb6"
+
+   strings:
+        $s0 = "flash.Media.Sound()"
+        $s1 = "call Kernel32!VirtualAlloc(0x1f140000hash$=0x10000hash$=0x1000hash$=0x40)"
+        $s2 = "{4D36E972-E325-11CE-BFC1-08002BE10318}"
+        $s3 = "NetStream"
+
+    condition:
+        all of them
+}
+
+rule ZhoupinExploitCrew
+{
+
+  meta:
+    author = "Cylance"
+    date = "2014-12-02"
+    description = "http://cylance.com/opcleaver"
+
+  strings:
+    $s1 = "zhoupin exploit crew" nocase
+    $s2 = "zhopin exploit crew" nocase
+
+  condition:
+    1 of them
+}
+
+rule BackDoorLogger
+{
+
+  meta:
+    author = "Cylance"
+    date = "2014-12-02"
+    description = "http://cylance.com/opcleaver"
+
+  strings:
+    $s1 = "BackDoorLogger"
+    $s2 = "zhuAddress"
+
+  condition:
+    all of them
+}
+
+rule Jasus
+{
+
+  meta:
+    author = "Cylance"
+    date = "2014-12-02"
+    description = "http://cylance.com/opcleaver"
+
+  strings:
+    $s1 = "pcap_dump_open"
+    $s2 = "Resolving IPs to poison..."
+    $s3 = "WARNNING: Gateway IP can not be found"
+
+  condition:
+    all of them
+}
+
+rule LoggerModule
+{
+
+  meta:
+    author = "Cylance"
+    date = "2014-12-02"
+    description = "http://cylance.com/opcleaver"
+
+  strings:
+    $s1 = "%s-%02d%02d%02d%02d%02d.r"
+    $s2 = "C:\\Users\\%s\\AppData\\Cookies\\"
+
+  condition:
+    all of them
+}
+
+rule NetC
+{
+
+  meta:
+    author = "Cylance"
+    date = "2014-12-02"
+    description = "http://cylance.com/opcleaver"
+
+  strings:
+    $s1 = "NetC.exe" wide
+    $s2 = "Net Service"
+
+  condition:
+    all of them
+}
+
+rule ShellCreator2
+{
+
+  meta:
+    author = "Cylance"
+    date = "2014-12-02"
+    description = "http://cylance.com/opcleaver"
+
+  strings:
+    $s1 = "ShellCreator2.Properties"
+    $s2 = "set_IV"
+
+  condition:
+    all of them
+}
+
+rule SmartCopy2
+{
+
+  meta:
+    author = "Cylance"
+    date = "2014-12-02"
+    description = "http://cylance.com/opcleaver"
+
+  strings:
+    $s1 = "SmartCopy2.Properties"
+    $s2 = "ZhuFrameWork"
+
+  condition:
+    all of them
+}
+
+rule SynFlooder
+{
+
+  meta:
+    author = "Cylance"
+    date = "2014-12-02"
+    description = "http://cylance.com/opcleaver"
+
+  strings:
+    $s1 = "Unable to resolve [ %s ]. ErrorCode %d"
+    $s2 = "your target's IP is : %s"
+    $s3 = "Raw TCP Socket Created successfully."
+
+  condition:
+    all of them
+}
+
+rule TinyZBot
+{
+
+  meta:
+    author = "Cylance"
+    date = "2014-12-02"
+    description = "http://cylance.com/opcleaver"
+
+  strings:
+    $s1 = "NetScp" wide
+    $s2 = "TinyZBot.Properties.Resources.resources"
+    $s3 = "Aoao WaterMark"
+    $s4 = "Run_a_exe"
+    $s5 = "netscp.exe"
+    $s6 = "get_MainModule_WebReference_DefaultWS"
+    $s7 = "remove_CheckFileMD5Completed"
+    $s8 = "http://tempuri.org/"
+    $s9 = "Zhoupin_Cleaver"
+
+  condition:
+    ($s1 and $s2) or ($s3 and $s4 and $s5) or ($s6 and $s7 and $s8) or ($s9)
+}
+
+rule antivirusdetector
+{
+
+  meta:
+    author = "Cylance"
+    date = "2014-12-02"
+    description = "http://cylance.com/opcleaver"
+
+    strings:
+        $s1 = "getShadyProcess"
+        $s2 = "getSystemAntiviruses"
+        $s3 = "AntiVirusDetector"
+
+    condition:
+        all of them
+}
+
+rule csext
+{
+
+  meta:
+    author = "Cylance"
+    date = "2014-12-02"
+    description = "http://cylance.com/opcleaver"
+
+  strings:
+    $s1 = "COM+ System Extentions"
+    $s2 = "csext.exe"
+    $s3 = "COM_Extentions_bin"
+
+  condition:
+    all of them
+}
+
+rule kagent
+{
+
+  meta:
+    author = "Cylance"
+    date = "2014-12-02"
+    description = "http://cylance.com/opcleaver"
+
+  strings:
+    $s1 = "kill command is in last machine, going back"
+    $s2 = "message data length in B64: %d Bytes"
+
+  condition:
+    all of them
+}
+
+rule mimikatzWrapper : Toolkit
+{
+
+  meta:
+    author = "Cylance"
+    date = "2014-12-02"
+    description = "http://cylance.com/opcleaver"
+
+  strings:
+    $s1 = "mimikatzWrapper"
+    $s2 = "get_mimikatz"
+
+  condition:
+    all of them
+}
+
+rule pvz_in
+{
+
+  meta:
+    author = "Cylance"
+    date = "2014-12-02"
+    description = "http://cylance.com/opcleaver"
+
+  strings:
+    $s1 = "LAST_TIME=00/00/0000:00:00PM$"
+    $s2 = "if %%ERRORLEVEL%% == 1 GOTO line"
+
+  condition:
+    all of them
+}
+
+rule pvz_out
+{
+
+  meta:
+    author = "Cylance"
+    date = "2014-12-02"
+    description = "http://cylance.com/opcleaver"
+
+  strings:
+    $s1 = "Network Connectivity Module" wide
+    $s2 = "OSPPSVC" wide
+
+  condition:
+    all of them
+}
+
+rule wndTest
+{
+
+  meta:
+    author = "Cylance"
+    date = "2014-12-02"
+    description = "http://cylance.com/opcleaver"
+
+  strings:
+    $s1 = "[Alt]" wide
+    $s2 = "<< %s >>:" wide
+    $s3 = "Content-Disposition: inline; comp=%s; account=%s; product=%d;"
+
+  condition:
+    all of them
+}
+
+rule zhCat
+{
+
+  meta:
+    author = "Cylance"
+    date = "2014-12-02"
+    description = "http://cylance.com/opcleaver"
+
+  strings:
+    $s1 = "zhCat -l -h -tp 1234"
+    $s2 = "ABC ( A Big Company )" wide
+
+  condition:
+    all of them
+}
+
+rule zhLookUp
+{
+
+  meta:
+    author = "Cylance"
+    date = "2014-12-02"
+    description = "http://cylance.com/opcleaver"
+
+  strings:
+    $s1 = "zhLookUp.Properties"
+
+  condition:
+    all of them
+}
+
+rule zhmimikatz
+{
+
+  meta:
+    author = "Cylance"
+    date = "2014-12-02"
+    description = "http://cylance.com/opcleaver"
+
+  strings:
+    $s1 = "MimikatzRunner"
+    $s2 = "zhmimikatz"
+
+  condition:
+    all of them
+}
+
+rule Zh0uSh311
+{
+
+  meta:
+    author = "Cylance"
+    date = "2014-12-02"
+    description = "http://cylance.com/opcleaver"
+
+  strings:
+    $s1 = "Zh0uSh311"
+
+  condition:
+    all of them
+}
+
+rule OPCLEAVER_BackDoorLogger
+{
+
+    meta:
+        description = "Keylogger used by attackers in Operation Cleaver"
+        reference = "http://cylance.com/assets/Cleaver/Cylance_Operation_Cleaver_Report.pdf"
+        date = "2014/12/02"
+        author = "Cylance Inc."
+        score = "70"
+
+    strings:
+        $s1 = "BackDoorLogger"
+        $s2 = "zhuAddress"
+
+    condition:
+        all of them
+}
+
+rule OPCLEAVER_Jasus
+{
+
+    meta:
+        description = "ARP cache poisoner used by attackers in Operation Cleaver"
+        reference = "http://cylance.com/assets/Cleaver/Cylance_Operation_Cleaver_Report.pdf"
+        date = "2014/12/02"
+        author = "Cylance Inc."
+        score = "70"
+
+    strings:
+        $s1 = "pcap_dump_open"
+        $s2 = "Resolving IPs to poison..."
+        $s3 = "WARNNING: Gateway IP can not be found"
+
+    condition:
+        all of them
+}
+
+rule OPCLEAVER_LoggerModule
+{
+
+    meta:
+        description = "Keylogger used by attackers in Operation Cleaver"
+        reference = "http://cylance.com/assets/Cleaver/Cylance_Operation_Cleaver_Report.pdf"
+        date = "2014/12/02"
+        author = "Cylance Inc."
+        score = "70"
+
+    strings:
+        $s1 = "%s-%02d%02d%02d%02d%02d.r"
+        $s2 = "C:\\Users\\%s\\AppData\\Cookies\\"
+
+    condition:
+        all of them
+}
+
+rule OPCLEAVER_NetC
+{
+
+    meta:
+        description = "Net Crawler used by attackers in Operation Cleaver"
+        reference = "http://cylance.com/assets/Cleaver/Cylance_Operation_Cleaver_Report.pdf"
+        date = "2014/12/02"
+        author = "Cylance Inc."
+        score = "70"
+
+    strings:
+        $s1 = "NetC.exe" wide
+        $s2 = "Net Service"
+
+    condition:
+        all of them
+}
+
+rule OPCLEAVER_ShellCreator2
+{
+
+    meta:
+        description = "Shell Creator used by attackers in Operation Cleaver to create ASPX web shells"
+        reference = "http://cylance.com/assets/Cleaver/Cylance_Operation_Cleaver_Report.pdf"
+        date = "2014/12/02"
+        author = "Cylance Inc."
+        score = "70"
+
+    strings:
+        $s1 = "ShellCreator2.Properties"
+        $s2 = "set_IV"
+
+    condition:
+        all of them
+}
+
+rule OPCLEAVER_SmartCopy2
+{
+
+    meta:
+        description = "Malware or hack tool used by attackers in Operation Cleaver"
+        reference = "http://cylance.com/assets/Cleaver/Cylance_Operation_Cleaver_Report.pdf"
+        date = "2014/12/02"
+        author = "Cylance Inc."
+        score = "70"
+
+    strings:
+        $s1 = "SmartCopy2.Properties"
+        $s2 = "ZhuFrameWork"
+
+    condition:
+        all of them
+}
+
+rule OPCLEAVER_SynFlooder
+{
+
+    meta:
+        description = "Malware or hack tool used by attackers in Operation Cleaver"
+        reference = "http://cylance.com/assets/Cleaver/Cylance_Operation_Cleaver_Report.pdf"
+        date = "2014/12/02"
+        author = "Cylance Inc."
+        score = "70"
+
+    strings:
+        $s1 = "Unable to resolve [ %s ]. ErrorCode %d"
+        $s2 = "your target’s IP is : %s"
+        $s3 = "Raw TCP Socket Created successfully."
+
+    condition:
+        all of them
+}
+
+rule OPCLEAVER_TinyZBot
+{
+
+    meta:
+        description = "Tiny Bot used by attackers in Operation Cleaver"
+        reference = "http://cylance.com/assets/Cleaver/Cylance_Operation_Cleaver_Report.pdf"
+        date = "2014/12/02"
+        author = "Cylance Inc."
+        score = "70"
+
+    strings:
+        $s1 = "NetScp" wide
+        $s2 = "TinyZBot.Properties.Resources.resources"
+        $s3 = "Aoao WaterMark"
+        $s4 = "Run_a_exe"
+        $s5 = "netscp.exe"
+        $s6 = "get_MainModule_WebReference_DefaultWS"
+        $s7 = "remove_CheckFileMD5Completed"
+        $s8 = "http://tempuri.org/"
+        $s9 = "Zhoupin_Cleaver"
+
+    condition:
+        (($s1 and $s2) or ($s3 and $s4 and $s5) or ($s6 and $s7 and $s8) or $s9)
+}
+
+rule OPCLEAVER_ZhoupinExploitCrew
+{
+
+    meta:
+        description = "Keywords used by attackers in Operation Cleaver"
+        reference = "http://cylance.com/assets/Cleaver/Cylance_Operation_Cleaver_Report.pdf"
+        date = "2014/12/02"
+        author = "Cylance Inc."
+        score = "70"
+
+    strings:
+        $s1 = "zhoupin exploit crew" nocase
+        $s2 = "zhopin exploit crew" nocase
+
+    condition:
+        1 of them
+}
+
+rule OPCLEAVER_antivirusdetector
+{
+
+    meta:
+        description = "Hack tool used by attackers in Operation Cleaver"
+        reference = "http://cylance.com/assets/Cleaver/Cylance_Operation_Cleaver_Report.pdf"
+        date = "2014/12/02"
+        author = "Cylance Inc."
+        score = "70"
+
+    strings:
+        $s1 = "getShadyProcess"
+        $s2 = "getSystemAntiviruses"
+        $s3 = "AntiVirusDetector"
+
+    condition:
+        all of them
+}
+
+rule OPCLEAVER_csext
+{
+
+    meta:
+        description = "Backdoor used by attackers in Operation Cleaver"
+        reference = "http://cylance.com/assets/Cleaver/Cylance_Operation_Cleaver_Report.pdf"
+        date = "2014/12/02"
+        author = "Cylance Inc."
+        score = "70"
+
+    strings:
+        $s1 = "COM+ System Extentions"
+        $s2 = "csext.exe"
+        $s3 = "COM_Extentions_bin"
+
+    condition:
+        all of them
+}
+
+rule OPCLEAVER_kagent
+{
+
+    meta:
+        description = "Backdoor used by attackers in Operation Cleaver"
+        reference = "http://cylance.com/assets/Cleaver/Cylance_Operation_Cleaver_Report.pdf"
+        date = "2014/12/02"
+        author = "Cylance Inc."
+        score = "70"
+
+    strings:
+        $s1 = "kill command is in last machine, going back"
+        $s2 = "message data length in B64: %d Bytes"
+
+    condition:
+        all of them
+}
+
+rule OPCLEAVER_mimikatzWrapper
+{
+
+    meta:
+        description = "Mimikatz Wrapper used by attackers in Operation Cleaver"
+        reference = "http://cylance.com/assets/Cleaver/Cylance_Operation_Cleaver_Report.pdf"
+        date = "2014/12/02"
+        author = "Cylance Inc."
+        score = "70"
+
+    strings:
+        $s1 = "mimikatzWrapper"
+        $s2 = "get_mimikatz"
+
+    condition:
+        all of them
+}
+
+rule OPCLEAVER_pvz_in
+{
+
+    meta:
+        description = "Parviz tool used by attackers in Operation Cleaver"
+        reference = "http://cylance.com/assets/Cleaver/Cylance_Operation_Cleaver_Report.pdf"
+        date = "2014/12/02"
+        author = "Cylance Inc."
+        score = "70"
+
+    strings:
+        $s1 = "LAST_TIME=00/00/0000:00:00PM$"
+        $s2 = "if %%ERRORLEVEL%% == 1 GOTO line"
+
+    condition:
+        all of them
+}
+
+rule OPCLEAVER_pvz_out
+{
+
+    meta:
+        description = "Parviz tool used by attackers in Operation Cleaver"
+        reference = "http://cylance.com/assets/Cleaver/Cylance_Operation_Cleaver_Report.pdf"
+        date = "2014/12/02"
+        author = "Cylance Inc."
+        score = "70"
+
+    strings:
+        $s1 = "Network Connectivity Module" wide
+        $s2 = "OSPPSVC" wide
+
+    condition:
+        all of them
+}
+
+rule OPCLEAVER_wndTest
+{
+
+    meta:
+        description = "Backdoor used by attackers in Operation Cleaver"
+        reference = "http://cylance.com/assets/Cleaver/Cylance_Operation_Cleaver_Report.pdf"
+        date = "2014/12/02"
+        author = "Cylance Inc."
+        score = "70"
+
+    strings:
+        $s1 = "[Alt]" wide
+        $s2 = "<< %s >>:" wide
+        $s3 = "Content-Disposition: inline; comp=%s; account=%s; product=%d;"
+
+    condition:
+        all of them
+}
+
+rule OPCLEAVER_zhCat
+{
+
+    meta:
+        description = "Network tool used by Iranian hackers and used by attackers in Operation Cleaver"
+        reference = "http://cylance.com/assets/Cleaver/Cylance_Operation_Cleaver_Report.pdf"
+        date = "2014/12/02"
+        author = "Cylance Inc."
+        score = "70"
+
+    strings:
+        $s1 = "Mozilla/4.0 ( compatible; MSIE 7.0; AOL 8.0 )" ascii fullword
+        $s2 = "ABC ( A Big Company )" wide fullword
+
+    condition:
+        all of them
+}
+
+rule OPCLEAVER_zhLookUp
+{
+
+    meta:
+        description = "Hack tool used by attackers in Operation Cleaver"
+        reference = "http://cylance.com/assets/Cleaver/Cylance_Operation_Cleaver_Report.pdf"
+        date = "2014/12/02"
+        author = "Cylance Inc."
+        score = "70"
+
+    strings:
+        $s1 = "zhLookUp.Properties"
+
+    condition:
+        all of them
+}
+
+rule OPCLEAVER_zhmimikatz
+{
+
+    meta:
+        description = "Mimikatz wrapper used by attackers in Operation Cleaver"
+        reference = "http://cylance.com/assets/Cleaver/Cylance_Operation_Cleaver_Report.pdf"
+        date = "2014/12/02"
+        author = "Cylance Inc."
+        score = "70"
+
+    strings:
+        $s1 = "MimikatzRunner"
+        $s2 = "zhmimikatz"
+
+    condition:
+        all of them
+}
+
+rule OPCLEAVER_Parviz_Developer
+{
+
+    meta:
+        description = "Parviz developer known from Operation Cleaver"
+        reference = "http://cylance.com/assets/Cleaver/Cylance_Operation_Cleaver_Report.pdf"
+        date = "2014/12/02"
+        author = "Florian Roth"
+        score = "70"
+
+    strings:
+        $s1 = "Users\\parviz\\documents\\" nocase
+
+    condition:
+        $s1
+}
+
+rule OPCLEAVER_CCProxy_Config
+{
+
+    meta:
+        description = "CCProxy config known from Operation Cleaver"
+        reference = "http://cylance.com/assets/Cleaver/Cylance_Operation_Cleaver_Report.pdf"
+        date = "2014/12/02"
+        author = "Florian Roth"
+        score = "70"
+
+    strings:
+        $s1 = "UserName=User-001" fullword ascii
+        $s2 = "Web=1" fullword ascii
+        $s3 = "Mail=1" fullword ascii
+        $s4 = "FTP=0" fullword ascii
+        $x1 = "IPAddressLow=78.109.194.114" fullword ascii
+
+    condition:
+        all of ($s*) or $x1
+}
+
+rule Misdat_Backdoor_Packed
+{
+    
+    meta:
+        author = "Cylance SPEAR Team"
+        note = "Probably Prone to False Positive"
+
+    strings:
+        $upx = {33 2E 30 33 00 55 50 58 21}
+        $send = {00 00 00 73 65 6E 64 00 00 00}
+        $delphi_sec_pe = {50 45 00 00 4C 01 03 00 19 5E 42 2A}
+        $shellexec = {00 00 00 53 68 65 6C 6C 45 78 65 63 75 74 65 57 00 00 00}
+        
+    condition:
+        filesize < 100KB and $upx and $send and $delphi_sec_pe and $shellexec
+}
+
+rule MiSType_Backdoor_Packed
+{
+    
+    meta:
+        author = "Cylance SPEAR Team"
+        note = "Probably Prone to False Positive"
+
+    strings:
+        $upx = {33 2E 30 33 00 55 50 58 21}
+        $send_httpquery = {00 00 00 48 74 74 70 51 75 65 72 79 49 6E 66 6F 41 00 00 73 65 6E 64 00 00}
+        $delphi_sec_pe = {50 45 00 00 4C 01 03 00 19 5E 42 2A}
+    
+    condition:
+        filesize < 100KB and $upx and $send_httpquery and $delphi_sec_pe
+}
+
+rule Misdat_Backdoor
+{
+   
+   meta:
+        author = "Cylance SPEAR Team"
+        /* Decode Function
+        CODE:00406C71 8B 55 F4                  mov     edx, [ebp+var_C]
+        CODE:00406C74 8A 54 1A FF               mov     dl, [edx+ebx-1]
+        CODE:00406C78 8B 4D F8                  mov     ecx, [ebp+var_8]
+        CODE:00406C7B C1 E9 08                  shr     ecx, 8
+        CODE:00406C7E 32 D1                     xor     dl, cl
+        CODE:00406C80 88 54 18 FF               mov     [eax+ebx-1], dl
+        CODE:00406C84 8B 45 F4                  mov     eax, [ebp+var_C]
+        CODE:00406C87 0F B6 44 18 FF            movzx   eax, byte ptr [eax+ebx-1]
+        CODE:00406C8C 03 45 F8                  add     eax, [ebp+var_8]
+        CODE:00406C8F 69 C0 D9 DB 00 00         imul    eax, 0DBD9h
+        CODE:00406C95 05 3B DA 00 00            add     eax, 0DA3Bh
+        CODE:00406C9A 89 45 F8                  mov     [ebp+var_8], eax
+        CODE:00406C9D 43                        inc     ebx
+        CODE:00406C9E 4E                        dec     esi
+        CODE:00406C9F 75 C9                     jnz     short loc_406C6A
+        */
+    
+    strings:
+        $imul = {03 45 F8 69 C0 D9 DB 00 00 05 3B DA 00 00}
+        $delphi = {50 45 00 00 4C 01 08 00 19 5E 42 2A}
+        
+    condition:
+        $imul and $delphi
+}
+
+rule SType_Backdoor
+{
+   
+    meta:
+        author = "Cylance SPEAR Team"
+        
+        /* Decode Function
+        8B 1A       mov     ebx, [edx]
+        8A 1B       mov     bl, [ebx]
+        80 EB 02    sub     bl, 2
+        8B 74 24 08 mov     esi, [esp+14h+var_C]
+        32 1E       xor     bl, [esi]
+        8B 31       mov     esi, [ecx]
+        88 1E       mov     [esi], bl
+        8B 1A       mov     ebx, [edx]
+        43          inc     ebx
+        89 1A       mov     [edx], ebx
+        8B 19       mov     ebx, [ecx]
+        43          inc     ebx
+        89 19       mov     [ecx], ebx
+        48          dec     eax
+        75 E2       jnz     short loc_40EAC6
+        */
+
+    strings:
+        $stype = "stype=info&data="
+        $mmid = "?mmid="
+        $status = "&status=run succeed"
+        $mutex = "_KB10B2D1_CIlFD2C"
+        $decode = {8B 1A 8A 1B 80 EB 02 8B 74 24 08 32 1E 8B 31 88 1E 8B 1A 43}
+    
+    condition:
+        $stype or ($mmid and $status) or $mutex or $decode
+}
+
+rule Zlib_Backdoor
+{
+   
+    meta:
+        author = "Cylance SPEAR Team"
+        
+        /* String
+        C7 45 FC 00 04 00 00          mov     [ebp+Memory], 400h
+        C6 45 D8 50                   mov     [ebp+Str], 'P'
+        C6 45 D9 72                   mov     [ebp+var_27], 'r'
+        C6 45 DA 6F                   mov     [ebp+var_26], 'o'
+        C6 45 DB 78                   mov     [ebp+var_25], 'x'
+        C6 45 DC 79                   mov     [ebp+var_24], 'y'
+        C6 45 DD 2D                   mov     [ebp+var_23], '-'
+        C6 45 DE 41                   mov     [ebp+var_22], 'A'
+        C6 45 DF 75                   mov     [ebp+var_21], 'u'
+        C6 45 E0 74                   mov     [ebp+var_20], 't'
+        C6 45 E1 68                   mov     [ebp+var_1F], 'h'
+        C6 45 E2 65                   mov     [ebp+var_1E], 'e'
+        C6 45 E3 6E                   mov     [ebp+var_1D], 'n'
+        C6 45 E4 74                   mov     [ebp+var_1C], 't'
+        C6 45 E5 69                   mov     [ebp+var_1B], 'i'
+        C6 45 E6 63                   mov     [ebp+var_1A], 'c'
+        C6 45 E7 61                   mov     [ebp+var_19], 'a'
+        C6 45 E8 74                   mov     [ebp+var_18], 't'
+        C6 45 E9 65                   mov     [ebp+var_17], 'e'
+        C6 45 EA 3A                   mov     [ebp+var_16], ':'
+        C6 45 EB 20                   mov     [ebp+var_15], ' '
+        C6 45 EC 4E                   mov     [ebp+var_14], 'N'
+        C6 45 ED 54                   mov     [ebp+var_13], 'T'
+        C6 45 EE 4C                   mov     [ebp+var_12], 'L'
+        C6 45 EF 4D                   mov     [ebp+var_11], 'M'
+        C6 45 F0 20                   mov     [ebp+var_10], ' '
+        */
+
+
+    strings:
+        $auth = {C6 45 D8 50 C6 45 D9 72 C6 45 DA 6F C6 45 DB 78 C6 45 DC 79 C6 45 DD 2D}
+        $auth2 = {C7 45 FC 00 04 00 00 C6 45 ?? 50 C6 45 ?? 72 C6 45 ?? 6F}
+        $ntlm = "NTLM" wide
+    
+    condition:
+        ($auth or $auth2) and $ntlm
+}
+/*APT_OpDustStrom.yar loaded*/

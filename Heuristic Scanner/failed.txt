@@ -1,0 +1,1 @@
+Scan failed on: /home/sandeep/snap/firefox/common/.cache/mozilla/firefox/j5w2a7b0.default/cache2/entries/FAA5936A2886AB9E25F7BEF1E4C355A1D3596727

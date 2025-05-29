@@ -10,11 +10,13 @@ namespace fs = std::filesystem;
 
 ofstream out("malwarePaths.txt");
 ofstream pathOut("pathsScanned.txt");
-
+ofstream failedScan("failed.txt");
+ofstream successScan("success.txt");
 int callback(YR_SCAN_CONTEXT* context, int message, void* message_data, void* user_data) {
     if (message == CALLBACK_MSG_RULE_MATCHING) {
         std::string* matched_file = static_cast<std::string*>(user_data);
-        std::cout << "[+] YARA match found in: " << *matched_file << std::endl;
+        
+        successScan<< "[+] YARA match found in: " << *matched_file << std::endl;
     }
     return CALLBACK_CONTINUE;
 }
@@ -22,21 +24,21 @@ int callback(YR_SCAN_CONTEXT* context, int message, void* message_data, void* us
 void run_yara_on_file(const std::string& filepath, const std::string& rule_file) {
     YR_RULES* rules = nullptr;
     YR_COMPILER* compiler = nullptr;
-
+    
     if (yr_initialize() != ERROR_SUCCESS) {
-        std::cerr << "Failed to initialize YARA" << std::endl;
+        failedScan << "Failed to initialize YARA" << std::endl;
         return;
     }
 
     if (yr_compiler_create(&compiler) != ERROR_SUCCESS) {
-        std::cerr << "Failed to create YARA compiler" << std::endl;
+        failedScan << "Failed to create YARA compiler" << std::endl;
         yr_finalize();
         return;
     }
 
     FILE* rule_fp = fopen(rule_file.c_str(), "r");
     if (!rule_fp) {
-        std::cerr << "Failed to open rule file: " << rule_file << std::endl;
+        failedScan << "Failed to open rule file: " << rule_file << std::endl;
         yr_compiler_destroy(compiler);
         yr_finalize();
         return;
@@ -54,7 +56,7 @@ void run_yara_on_file(const std::string& filepath, const std::string& rule_file)
     );
 
     if (result != ERROR_SUCCESS) {
-        std::cerr << "Scan failed on: " << filepath << std::endl;
+        failedScan << "Scan failed on: " << filepath << std::endl;
     }
 
     yr_rules_destroy(rules);
@@ -138,7 +140,7 @@ int main() {
     scanDirectory("C:\\");
 #else
     std::cout << "[*] Starting scan on Linux: / \n";
-    scanDirectory("/home/sandeep/cppTutorials");
+    scanDirectory("/home/sandeep");
     vector<string>paths;
     string line;
     while(std::getline(readFilePaths,line)){
