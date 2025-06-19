@@ -1,0 +1,403 @@
+path,entropy,isSuspicious,scanStatus
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/gradle-input-tracking-8.9.jar,7.78876,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/gradle-input-tracking-8.9.jar → FALSE POSITIVE (Reason: High entropy but not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/gradle-logging-8.9.jar,7.81456,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/gradle-logging-8.9.jar → FALSE POSITIVE (Reason: High entropy but standard path for gradle libraries and not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/kotlin-daemon-embeddable-1.9.23.jar,7.92058,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/kotlin-daemon-embeddable-1.9.23.jar → FALSE POSITIVE (Reason: High entropy but standard path for gradle.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/gradle-kotlin-dsl-extensions-8.9.jar,7.83981,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/gradle-kotlin-dsl-extensions-8.9.jar → FALSE POSITIVE (Reason: High entropy but standard path for gradle.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/file-events-windows-i386-min-0.22-milestone-26.jar,7.99726,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/file-events-windows-i386-min-0.22-milestone-26.jar → FALSE POSITIVE (Reason: High entropy but not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/gradle-launcher-8.9.jar,7.85321,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/gradle-launcher-8.9.jar → FALSE POSITIVE (Reason: High entropy but standard path for gradle and not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/groovy-ant-3.0.21.jar,7.96456,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/groovy-ant-3.0.21.jar → FALSE POSITIVE (Reason: High entropy but standard path for gradle libraries and not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/gradle-files-8.9.jar,7.70185,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/gradle-files-8.9.jar → FALSE POSITIVE (Reason: High entropy but standard path for gradle and not flagged as suspicious)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/gradle-model-groovy-8.9.jar,7.86149,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/gradle-model-groovy-8.9.jar → FALSE POSITIVE (Reason: High entropy but standard path for gradle.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/asm-9.7.jar,7.97545,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/asm-9.7.jar → FALSE POSITIVE (Reason: High entropy but not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/log4j-over-slf4j-1.7.36.jar,7.68681,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/log4j-over-slf4j-1.7.36.jar → FALSE POSITIVE (Reason: High entropy but standard library path and not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/asm-commons-9.7.jar,7.9551,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/asm-commons-9.7.jar → FALSE POSITIVE (Reason: High entropy but in a gradle directory, and not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/gradle-build-operations-8.9.jar,7.63693,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/gradle-build-operations-8.9.jar → FALSE POSITIVE (Reason: High entropy but not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/gradle-execution-8.9.jar,7.8328,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/gradle-execution-8.9.jar → FALSE POSITIVE (Reason: High entropy but standard path for gradle library and not flagged as suspicious)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/gradle-daemon-protocol-8.9.jar,7.72288,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/gradle-daemon-protocol-8.9.jar → FALSE POSITIVE (Reason: High entropy but standard path for gradle installation.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/gradle-serialization-8.9.jar,7.78044,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/gradle-serialization-8.9.jar → FALSE POSITIVE (Reason: High entropy but standard path for gradle.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/kotlin-assignment-compiler-plugin-embeddable-1.9.23.jar,7.79957,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/kotlin-assignment-compiler-plugin-embeddable-1.9.23.jar → FALSE POSITIVE (Reason: High entropy but standard path for gradle dependencies and not flagged as suspicious)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/kotlin-scripting-common-1.9.23.jar,7.88134,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/kotlin-scripting-common-1.9.23.jar → FALSE POSITIVE (Reason: High entropy but standard path for gradle.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/groovy-docgenerator-3.0.21.jar,7.9288,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/groovy-docgenerator-3.0.21.jar → FALSE POSITIVE (Reason: High entropy but standard path for gradle library.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/gradle-declarative-dsl-evaluator-8.9.jar,7.80996,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/gradle-declarative-dsl-evaluator-8.9.jar → FALSE POSITIVE (Reason: High entropy but not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/commons-codec-1.16.1.jar,7.90872,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/commons-codec-1.16.1.jar → FALSE POSITIVE (Reason: High entropy but not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/gradle-problems-api-8.9.jar,7.60756,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/gradle-problems-api-8.9.jar → FALSE POSITIVE (Reason: High entropy but not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/gradle-functional-8.9.jar,7.76175,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/gradle-functional-8.9.jar → FALSE POSITIVE (Reason: High entropy but standard path for gradle.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/gradle-snapshots-8.9.jar,7.83773,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/gradle-snapshots-8.9.jar → FALSE POSITIVE (Reason: High entropy but standard path for gradle and not flagged as suspicious)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/gradle-build-cache-local-8.9.jar,7.68283,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/gradle-build-cache-local-8.9.jar → FALSE POSITIVE (Reason: High entropy but in a standard application directory and not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/groovy-astbuilder-3.0.21.jar,7.57268,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/groovy-astbuilder-3.0.21.jar → FALSE POSITIVE (Reason: High entropy but standard path for gradle libraries and not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/kotlin-scripting-compiler-impl-embeddable-1.9.23.jar,7.90244,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/kotlin-scripting-compiler-impl-embeddable-1.9.23.jar → FALSE POSITIVE (Reason: High entropy but standard path for gradle.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/tomlj-1.0.0.jar,7.9388,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/tomlj-1.0.0.jar → FALSE POSITIVE (Reason: High entropy but not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/gradle-base-asm-8.9.jar,7.80715,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/gradle-base-asm-8.9.jar → FALSE POSITIVE (Reason: High entropy but not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/gradle-file-collections-8.9.jar,7.84297,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/gradle-file-collections-8.9.jar → FALSE POSITIVE (Reason: High entropy but not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-resources-sftp-8.9.jar,7.69489,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-resources-sftp-8.9.jar → FALSE POSITIVE (Reason: High entropy but standard path for gradle plugins and not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-composite-builds-8.9.jar,7.86637,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-composite-builds-8.9.jar → FALSE POSITIVE (Reason: High entropy but not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-dependency-management-8.9.jar,7.85641,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-dependency-management-8.9.jar → FALSE POSITIVE (Reason: High entropy but standard path for gradle plugins and not flagged as suspicious)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-resources-http-8.9.jar,7.78805,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-resources-http-8.9.jar → FALSE POSITIVE (Reason: High entropy but standard path for gradle and not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-unit-test-fixtures-8.9.jar,7.84387,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-unit-test-fixtures-8.9.jar → FALSE POSITIVE (Reason: High entropy but standard path for gradle libraries and not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/jcifs-1.3.17.jar,7.94137,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/jcifs-1.3.17.jar → FALSE POSITIVE (Reason: High entropy but standard path for gradle dependencies and not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-stdlib-serialization-codecs-8.9.jar,7.8591,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-stdlib-serialization-codecs-8.9.jar → FALSE POSITIVE (Reason: High entropy but not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-platform-jvm-8.9.jar,7.79015,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-platform-jvm-8.9.jar → FALSE POSITIVE (Reason: High entropy but not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/httpclient-4.5.14.jar,7.92465,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/httpclient-4.5.14.jar → FALSE POSITIVE (Reason: High entropy but standard path for gradle dependencies and not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/google-api-client-1.34.0.jar,7.919,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/google-api-client-1.34.0.jar → FALSE POSITIVE (Reason: High entropy but not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-dependency-management-serialization-codecs-8.9.jar,7.89913,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-dependency-management-serialization-codecs-8.9.jar → FALSE POSITIVE (Reason: High entropy but not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/bcpg-jdk18on-1.78.1.jar,7.84941,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/bcpg-jdk18on-1.78.1.jar → FALSE POSITIVE (Reason: High entropy in a gradle directory, but not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-code-quality-8.9.jar,7.91062,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-code-quality-8.9.jar → FALSE POSITIVE (Reason: High entropy but not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-core-kotlin-extensions-8.9.jar,7.63256,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-core-kotlin-extensions-8.9.jar → FALSE POSITIVE (Reason: High entropy but standard path for gradle.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-plugins-jvm-test-fixtures-8.9.jar,7.55447,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-plugins-jvm-test-fixtures-8.9.jar → FALSE POSITIVE (Reason: High entropy but not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-testing-jvm-infrastructure-8.9.jar,7.80059,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-testing-jvm-infrastructure-8.9.jar → FALSE POSITIVE (Reason: High entropy in a gradle directory, but not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-tooling-native-8.9.jar,7.6473,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-tooling-native-8.9.jar → FALSE POSITIVE (Reason: High entropy but standard path for gradle.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-java-platform-8.9.jar,7.64863,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-java-platform-8.9.jar → FALSE POSITIVE (Reason: High entropy in a standard application directory, but not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-plugins-java-base-8.9.jar,7.9296,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-plugins-java-base-8.9.jar → FALSE POSITIVE (Reason: High entropy in a standard application directory, but not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-workers-8.9.jar,7.83468,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-workers-8.9.jar → FALSE POSITIVE (Reason: High entropy but standard path for gradle libraries and not flagged as suspicious)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/plexus-interpolation-1.26.jar,7.79583,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/plexus-interpolation-1.26.jar → FALSE POSITIVE (Reason: High entropy but standard path for gradle libraries and not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/google-oauth-client-1.34.1.jar,7.85623,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/google-oauth-client-1.34.1.jar → FALSE POSITIVE (Reason: High entropy but not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-resources-s3-8.9.jar,7.73376,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-resources-s3-8.9.jar → FALSE POSITIVE (Reason: High entropy but standard path for gradle plugins and not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/jsch-0.2.16.jar,7.92058,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/jsch-0.2.16.jar → FALSE POSITIVE (Reason: High entropy but not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-build-profile-8.9.jar,7.80368,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-build-profile-8.9.jar → FALSE POSITIVE (Reason: High entropy but standard path for gradle.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/sshd-core-2.12.1.jar,7.93327,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/sshd-core-2.12.1.jar → FALSE POSITIVE (Reason: High entropy but not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-jacoco-8.9.jar,7.85651,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-jacoco-8.9.jar → FALSE POSITIVE (Reason: High entropy in a gradle directory, but not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/testng-6.3.1.jar,7.92769,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/testng-6.3.1.jar → FALSE POSITIVE (Reason: High entropy but not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-plugins-version-catalog-8.9.jar,7.82517,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-plugins-version-catalog-8.9.jar → FALSE POSITIVE (Reason: High entropy but standard path for gradle plugins.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/plexus-utils-3.5.1.jar,7.94877,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/plexus-utils-3.5.1.jar → FALSE POSITIVE (Reason: High entropy but not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/maven-model-3.9.5.jar,7.96537,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/maven-model-3.9.5.jar → FALSE POSITIVE (Reason: High entropy but standard path for gradle dependencies and not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-ear-8.9.jar,7.86834,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-ear-8.9.jar → FALSE POSITIVE (Reason: High entropy but standard path for gradle plugins and not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-ide-8.9.jar,7.86358,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-ide-8.9.jar → FALSE POSITIVE (Reason: High entropy but in a standard application directory and not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-build-init-8.9.jar,7.76255,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-build-init-8.9.jar → FALSE POSITIVE (Reason: High entropy in a gradle directory, but not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-testing-jvm-8.9.jar,7.82463,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-testing-jvm-8.9.jar → FALSE POSITIVE (Reason: High entropy in a gradle directory, but not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/jsoup-1.15.3.jar,7.94532,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/jsoup-1.15.3.jar → FALSE POSITIVE (Reason: High entropy in a standard application directory, but not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/ivy-2.5.2.jar,7.93405,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/ivy-2.5.2.jar → FALSE POSITIVE (Reason: High entropy but standard path for gradle.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/aws-java-sdk-sts-1.12.651.jar,7.86879,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/aws-java-sdk-sts-1.12.651.jar → FALSE POSITIVE (Reason: High entropy but standard path for gradle dependencies and not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/snakeyaml-2.0.jar,7.85083,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/snakeyaml-2.0.jar → FALSE POSITIVE (Reason: High entropy but standard path for gradle library.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/jackson-core-2.16.1.jar,7.9427,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/jackson-core-2.16.1.jar → FALSE POSITIVE (Reason: High entropy but not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/dd-plist-1.27.jar,7.97438,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/dd-plist-1.27.jar → FALSE POSITIVE (Reason: High entropy but not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/eddsa-0.3.0.jar,7.88442,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/eddsa-0.3.0.jar → FALSE POSITIVE (Reason: High entropy but in a standard application directory and not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/opencensus-api-0.31.1.jar,7.8263,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/opencensus-api-0.31.1.jar → FALSE POSITIVE (Reason: High entropy in a standard application directory, but not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/plexus-cipher-2.0.jar,7.7374,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/plexus-cipher-2.0.jar → FALSE POSITIVE (Reason: High entropy but not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-security-8.9.jar,7.83533,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-security-8.9.jar → FALSE POSITIVE (Reason: High entropy but not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-tooling-api-builders-8.9.jar,7.8914,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-tooling-api-builders-8.9.jar → FALSE POSITIVE (Reason: High entropy but not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-plugins-java-8.9.jar,7.77574,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-plugins-java-8.9.jar → FALSE POSITIVE (Reason: High entropy in a standard application directory, but not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/maven-settings-builder-3.9.5.jar,7.7771,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/maven-settings-builder-3.9.5.jar → FALSE POSITIVE (Reason: High entropy in a standard application directory, but not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/maven-settings-3.9.5.jar,7.91166,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/maven-settings-3.9.5.jar → FALSE POSITIVE (Reason: High entropy but not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/google-http-client-1.42.2.jar,7.88503,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/google-http-client-1.42.2.jar → FALSE POSITIVE (Reason: High entropy in a standard application directory, but not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-build-cache-http-8.9.jar,7.74506,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-build-cache-http-8.9.jar → FALSE POSITIVE (Reason: High entropy but standard path for gradle, and not flagged as suspicious)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-ivy-8.9.jar,7.8157,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-ivy-8.9.jar → FALSE POSITIVE (Reason: High entropy in a standard application directory, but not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-diagnostics-8.9.jar,7.86863,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-diagnostics-8.9.jar → FALSE POSITIVE (Reason: High entropy in a standard application directory, but not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-plugins-distribution-8.9.jar,7.64405,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-plugins-distribution-8.9.jar → FALSE POSITIVE (Reason: High entropy but standard path for gradle plugins.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/junit-platform-commons-1.8.2.jar,7.8937,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/junit-platform-commons-1.8.2.jar → FALSE POSITIVE (Reason: High entropy in a gradle directory, but not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-platform-base-8.9.jar,7.72701,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-platform-base-8.9.jar → FALSE POSITIVE (Reason: High entropy in a gradle directory, but not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/google-http-client-apache-v2-1.42.2.jar,7.56038,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/google-http-client-apache-v2-1.42.2.jar → FALSE POSITIVE (Reason: High entropy but standard path for gradle dependencies and not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-language-java-8.9.jar,7.84644,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-language-java-8.9.jar → FALSE POSITIVE (Reason: High entropy but standard Java library path and not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-flow-services-8.9.jar,7.83453,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-flow-services-8.9.jar → FALSE POSITIVE (Reason: High entropy but standard application directory and not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/junit-platform-engine-1.8.2.jar,7.83723,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/junit-platform-engine-1.8.2.jar → FALSE POSITIVE (Reason: High entropy but not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-plugins-java-library-8.9.jar,7.53687,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-plugins-java-library-8.9.jar → FALSE POSITIVE (Reason: High entropy but not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-test-kit-8.9.jar,7.76317,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-test-kit-8.9.jar → FALSE POSITIVE (Reason: High entropy but not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-language-jvm-8.9.jar,7.63995,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-language-jvm-8.9.jar → FALSE POSITIVE (Reason: High entropy but standard path for gradle.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-testing-junit-platform-8.9.jar,7.84229,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-testing-junit-platform-8.9.jar → FALSE POSITIVE (Reason: High entropy in a standard application directory, but not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/bcutil-jdk18on-1.78.1.jar,7.81756,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/bcutil-jdk18on-1.78.1.jar → FALSE POSITIVE (Reason: High entropy but not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/grpc-context-1.27.2.jar,7.88412,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/grpc-context-1.27.2.jar → FALSE POSITIVE (Reason: High entropy but standard path for gradle plugins and not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/bsh-2.0b6.jar,7.95533,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/bsh-2.0b6.jar → FALSE POSITIVE (Reason: High entropy but not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/junit-platform-launcher-1.8.2.jar,7.85574,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/junit-platform-launcher-1.8.2.jar → FALSE POSITIVE (Reason: High entropy but not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-testing-base-8.9.jar,7.81201,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-testing-base-8.9.jar → FALSE POSITIVE (Reason: High entropy but standard path for gradle and not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/jatl-0.2.3.jar,7.87288,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/jatl-0.2.3.jar → FALSE POSITIVE (Reason: High entropy but not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/maven-repository-metadata-3.9.5.jar,7.85405,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/maven-repository-metadata-3.9.5.jar → FALSE POSITIVE (Reason: High entropy but standard path for gradle plugins and not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-configuration-cache-base-8.9.jar,7.76811,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-configuration-cache-base-8.9.jar → FALSE POSITIVE (Reason: High entropy in a gradle directory, but not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-stdlib-kotlin-extensions-8.9.jar,7.59404,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-stdlib-kotlin-extensions-8.9.jar → FALSE POSITIVE (Reason: High entropy but standard path for gradle.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-wrapper-main-8.9.jar,7.98482,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-wrapper-main-8.9.jar → FALSE POSITIVE (Reason: High entropy but standard path for gradle wrapper, and not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-configuration-problems-base-8.9.jar,7.83926,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-configuration-problems-base-8.9.jar → FALSE POSITIVE (Reason: High entropy but not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-plugins-application-8.9.jar,7.81167,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-plugins-application-8.9.jar → FALSE POSITIVE (Reason: High entropy but standard application path and not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/jcommander-1.78.jar,7.8825,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/jcommander-1.78.jar → FALSE POSITIVE (Reason: High entropy in a gradle directory, but not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/aws-java-sdk-s3-1.12.651.jar,7.88237,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/aws-java-sdk-s3-1.12.651.jar → FALSE POSITIVE (Reason: High entropy but standard path for gradle dependencies and not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/plexus-sec-dispatcher-2.0.jar,7.74102,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/plexus-sec-dispatcher-2.0.jar → FALSE POSITIVE (Reason: High entropy but standard path for gradle plugins and not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-publish-8.9.jar,7.81198,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-publish-8.9.jar → FALSE POSITIVE (Reason: High entropy but not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/sshd-sftp-2.12.1.jar,7.93628,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/sshd-sftp-2.12.1.jar → FALSE POSITIVE (Reason: High entropy but not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-testing-native-8.9.jar,7.79215,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-testing-native-8.9.jar → FALSE POSITIVE (Reason: High entropy but standard path for gradle.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/org.eclipse.jgit.ssh.apache-5.13.3.202401111512-r.jar,7.91029,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/org.eclipse.jgit.ssh.apache-5.13.3.202401111512-r.jar → FALSE POSITIVE (Reason: High entropy but standard path for gradle plugins and not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-scala-8.9.jar,7.8873,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-scala-8.9.jar → FALSE POSITIVE (Reason: High entropy in a gradle directory, but not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/google-api-services-storage-v1-rev20220705-1.32.1.jar,7.90353,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/google-api-services-storage-v1-rev20220705-1.32.1.jar → FALSE POSITIVE (Reason: High entropy but standard path for gradle dependencies and not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/aws-java-sdk-core-1.12.651.jar,7.87223,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/aws-java-sdk-core-1.12.651.jar → FALSE POSITIVE (Reason: High entropy but standard path for gradle dependencies and not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-core-serialization-codecs-8.9.jar,7.90636,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-core-serialization-codecs-8.9.jar → FALSE POSITIVE (Reason: High entropy but not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-testing-base-infrastructure-8.9.jar,7.69246,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-testing-base-infrastructure-8.9.jar → FALSE POSITIVE (Reason: High entropy but standard path for gradle.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-language-groovy-8.9.jar,7.84147,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-language-groovy-8.9.jar → FALSE POSITIVE (Reason: High entropy but standard path for gradle.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/maven-builder-support-3.9.5.jar,7.70829,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/maven-builder-support-3.9.5.jar → FALSE POSITIVE (Reason: High entropy but standard path for gradle.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-reporting-8.9.jar,7.89043,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-reporting-8.9.jar → FALSE POSITIVE (Reason: High entropy but standard application path and not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/opentest4j-1.3.0.jar,7.81693,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/opentest4j-1.3.0.jar → FALSE POSITIVE (Reason: High entropy but standard path for gradle plugins and not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-base-ide-plugins-8.9.jar,7.73328,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-base-ide-plugins-8.9.jar → FALSE POSITIVE (Reason: High entropy but standard path for gradle plugins and not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-ide-plugins-8.9.jar,7.88066,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-ide-plugins-8.9.jar → FALSE POSITIVE (Reason: High entropy but not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/org.eclipse.jgit-5.13.3.202401111512-r.jar,7.93361,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/org.eclipse.jgit-5.13.3.202401111512-r.jar → FALSE POSITIVE (Reason: High entropy but standard path for gradle plugins and not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-resources-gcs-8.9.jar,7.70123,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-resources-gcs-8.9.jar → FALSE POSITIVE (Reason: High entropy in a gradle directory, but not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-kotlin-dsl-provider-plugins-8.9.jar,7.86741,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-kotlin-dsl-provider-plugins-8.9.jar → FALSE POSITIVE (Reason: High entropy but not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-signing-8.9.jar,7.83967,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-signing-8.9.jar → FALSE POSITIVE (Reason: High entropy but not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-graph-serialization-8.9.jar,7.90217,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-graph-serialization-8.9.jar → FALSE POSITIVE (Reason: High entropy but standard path for gradle libraries and not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-maven-8.9.jar,7.83304,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-maven-8.9.jar → FALSE POSITIVE (Reason: High entropy but standard path for gradle plugins and not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-kotlin-dsl-tooling-builders-8.9.jar,7.8994,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-kotlin-dsl-tooling-builders-8.9.jar → FALSE POSITIVE (Reason: High entropy in a gradle directory, but not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/sshd-common-2.12.1.jar,7.91967,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/sshd-common-2.12.1.jar → FALSE POSITIVE (Reason: High entropy but not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-java-compiler-plugin-8.9.jar,7.68759,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-java-compiler-plugin-8.9.jar → FALSE POSITIVE (Reason: High entropy but not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-plugins-groovy-8.9.jar,7.84011,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-plugins-groovy-8.9.jar → FALSE POSITIVE (Reason: High entropy but standard path for gradle plugins.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/jackson-databind-2.16.1.jar,7.94132,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/jackson-databind-2.16.1.jar → FALSE POSITIVE (Reason: High entropy but not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-declarative-dsl-tooling-builders-8.9.jar,7.59196,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-declarative-dsl-tooling-builders-8.9.jar → FALSE POSITIVE (Reason: High entropy but standard path for gradle.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-antlr-8.9.jar,7.83779,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-antlr-8.9.jar → FALSE POSITIVE (Reason: High entropy but standard path for gradle.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-plugins-jvm-test-suite-8.9.jar,7.75881,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-plugins-jvm-test-suite-8.9.jar → FALSE POSITIVE (Reason: High entropy but not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/jackson-annotations-2.16.1.jar,7.8025,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/jackson-annotations-2.16.1.jar → FALSE POSITIVE (Reason: High entropy but standard path for gradle dependencies and not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-enterprise-8.9.jar,7.61447,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-enterprise-8.9.jar → FALSE POSITIVE (Reason: High entropy but standard path for gradle plugins and not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/google-http-client-gson-1.42.2.jar,7.57209,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/google-http-client-gson-1.42.2.jar → FALSE POSITIVE (Reason: High entropy in a JAR file within a Gradle directory is not necessarily malicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-language-native-8.9.jar,7.80703,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-language-native-8.9.jar → FALSE POSITIVE (Reason: High entropy in a standard application directory, but not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/bcprov-jdk18on-1.78.1.jar,7.89013,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/bcprov-jdk18on-1.78.1.jar → FALSE POSITIVE (Reason: High entropy but not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-plugin-use-8.9.jar,7.78054,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-plugin-use-8.9.jar → FALSE POSITIVE (Reason: High entropy but not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-platform-native-8.9.jar,7.77655,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-platform-native-8.9.jar → FALSE POSITIVE (Reason: High entropy in a standard application directory, but not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/joda-time-2.12.2.jar,7.82429,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/joda-time-2.12.2.jar → FALSE POSITIVE (Reason: High entropy but not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-bean-serialization-services-8.9.jar,7.85675,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-bean-serialization-services-8.9.jar → FALSE POSITIVE (Reason: High entropy but in a standard application directory.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-version-control-8.9.jar,7.79794,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-version-control-8.9.jar → FALSE POSITIVE (Reason: High entropy but not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-configuration-cache-8.9.jar,7.91029,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-configuration-cache-8.9.jar → FALSE POSITIVE (Reason: High entropy in a gradle directory, but not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/httpcore-4.4.14.jar,7.88687,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/httpcore-4.4.14.jar → FALSE POSITIVE (Reason: High entropy but not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-ide-native-8.9.jar,7.84348,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-ide-native-8.9.jar → FALSE POSITIVE (Reason: High entropy but standard path for gradle plugins and not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-guava-serialization-codecs-8.9.jar,7.729,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-guava-serialization-codecs-8.9.jar → FALSE POSITIVE (Reason: High entropy but not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-plugin-development-8.9.jar,7.87591,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-plugin-development-8.9.jar → FALSE POSITIVE (Reason: High entropy in a standard application directory, but not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-plugins-test-report-aggregation-8.9.jar,7.70087,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-plugins-test-report-aggregation-8.9.jar → FALSE POSITIVE (Reason: High entropy in a gradle directory, but not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-war-8.9.jar,7.73464,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-war-8.9.jar → FALSE POSITIVE (Reason: High entropy but not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-toolchains-jvm-8.9.jar,7.79142,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/gradle-toolchains-jvm-8.9.jar → FALSE POSITIVE (Reason: High entropy but in a standard application directory.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/aws-java-sdk-kms-1.12.651.jar,7.89685,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/aws-java-sdk-kms-1.12.651.jar → FALSE POSITIVE (Reason: High entropy in a Java archive within a Gradle directory, but not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/opencensus-contrib-http-util-0.31.1.jar,7.89179,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/opencensus-contrib-http-util-0.31.1.jar → FALSE POSITIVE (Reason: High entropy but not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/jmespath-java-1.12.651.jar,7.75456,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/plugins/jmespath-java-1.12.651.jar → FALSE POSITIVE (Reason: High entropy but not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/gradle-base-services-8.9.jar,7.82438,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/gradle-base-services-8.9.jar → FALSE POSITIVE (Reason: High entropy but not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/gradle-build-events-8.9.jar,7.68184,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/gradle-build-events-8.9.jar → FALSE POSITIVE (Reason: High entropy but not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/gradle-wrapper-shared-8.9.jar,7.87073,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/gradle-wrapper-shared-8.9.jar → FALSE POSITIVE (Reason: High entropy but standard path for gradle wrapper.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/native-platform-linux-aarch64-0.22-milestone-26.jar,7.89815,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/native-platform-linux-aarch64-0.22-milestone-26.jar → FALSE POSITIVE (Reason: High entropy but in a gradle directory and not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/gradle-native-8.9.jar,7.69397,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/gradle-native-8.9.jar → FALSE POSITIVE (Reason: High entropy but not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/gradle-hashing-8.9.jar,7.7449,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/gradle-hashing-8.9.jar → FALSE POSITIVE (Reason: High entropy but not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/objenesis-2.6.jar,7.81363,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/objenesis-2.6.jar → FALSE POSITIVE (Reason: High entropy but not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/gson-2.10.jar,7.89413,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/gson-2.10.jar → FALSE POSITIVE (Reason: High entropy but standard library path and not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/trove4j-1.0.20200330.jar,7.91849,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/trove4j-1.0.20200330.jar → FALSE POSITIVE (Reason: High entropy but standard path for gradle library.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/gradle-build-cache-packaging-8.9.jar,7.78622,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/gradle-build-cache-packaging-8.9.jar → FALSE POSITIVE (Reason: High entropy but standard path for gradle and not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/file-events-linux-aarch64-0.22-milestone-26.jar,7.99435,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/file-events-linux-aarch64-0.22-milestone-26.jar → FALSE POSITIVE (Reason: High entropy but in a standard application directory and not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/groovy-sql-3.0.21.jar,7.89884,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/groovy-sql-3.0.21.jar → FALSE POSITIVE (Reason: High entropy but standard path for gradle dependencies and not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/asm-tree-9.7.jar,7.88448,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/asm-tree-9.7.jar → FALSE POSITIVE (Reason: High entropy but standard path for gradle library and not flagged as suspicious)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/ant-launcher-1.10.13.jar,7.92724,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/ant-launcher-1.10.13.jar → FALSE POSITIVE (Reason: High entropy but standard path for gradle.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/file-events-osx-aarch64-0.22-milestone-26.jar,7.9445,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/file-events-osx-aarch64-0.22-milestone-26.jar → FALSE POSITIVE (Reason: High entropy but not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/file-events-osx-amd64-0.22-milestone-26.jar,7.95117,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/file-events-osx-amd64-0.22-milestone-26.jar → FALSE POSITIVE (Reason: High entropy but not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/gradle-worker-main-8.9.jar,7.70761,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/gradle-worker-main-8.9.jar → FALSE POSITIVE (Reason: High entropy but standard Java archive in a Gradle directory, and not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/javaparser-core-3.17.0.jar,7.94898,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/javaparser-core-3.17.0.jar → FALSE POSITIVE (Reason: High entropy but standard path for gradle library and not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/native-platform-linux-aarch64-ncurses6-0.22-milestone-26.jar,7.82208,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/native-platform-linux-aarch64-ncurses6-0.22-milestone-26.jar → FALSE POSITIVE (Reason: High entropy but not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/gradle-build-state-8.9.jar,7.74939,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/gradle-build-state-8.9.jar → FALSE POSITIVE (Reason: High entropy but not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/gradle-kotlin-dsl-8.9.jar,7.91105,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/gradle-kotlin-dsl-8.9.jar → FALSE POSITIVE (Reason: High entropy but standard path for gradle.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/gradle-io-8.9.jar,7.7849,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/gradle-io-8.9.jar → FALSE POSITIVE (Reason: High entropy but not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/native-platform-linux-amd64-ncurses6-0.22-milestone-26.jar,7.85423,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/native-platform-linux-amd64-ncurses6-0.22-milestone-26.jar → FALSE POSITIVE (Reason: High entropy but not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/gradle-core-api-8.9.jar,7.61634,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/gradle-core-api-8.9.jar → FALSE POSITIVE (Reason: High entropy but standard path for gradle library.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/native-platform-windows-amd64-min-0.22-milestone-26.jar,7.98847,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/native-platform-windows-amd64-min-0.22-milestone-26.jar → FALSE POSITIVE (Reason: High entropy but standard path for gradle wrapper.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/gradle-normalization-java-8.9.jar,7.7988,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/gradle-normalization-java-8.9.jar → FALSE POSITIVE (Reason: High entropy but not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/slf4j-api-1.7.36.jar,7.85675,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/slf4j-api-1.7.36.jar → FALSE POSITIVE (Reason: High entropy but standard library path and not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/gradle-declarative-dsl-provider-8.9.jar,7.86192,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/gradle-declarative-dsl-provider-8.9.jar → FALSE POSITIVE (Reason: High entropy but not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/jcl-over-slf4j-1.7.36.jar,7.76837,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/jcl-over-slf4j-1.7.36.jar → FALSE POSITIVE (Reason: High entropy but not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/groovy-dateutil-3.0.21.jar,7.6644,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/groovy-dateutil-3.0.21.jar → FALSE POSITIVE (Reason: High entropy but standard path for gradle dependencies and not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/native-platform-freebsd-amd64-libcpp-0.22-milestone-26.jar,7.93868,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/native-platform-freebsd-amd64-libcpp-0.22-milestone-26.jar → FALSE POSITIVE (Reason: High entropy but not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/xml-apis-1.4.01.jar,7.69667,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/xml-apis-1.4.01.jar → FALSE POSITIVE (Reason: High entropy but standard path for gradle dependencies and not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/gradle-core-8.9.jar,7.85754,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/gradle-core-8.9.jar → FALSE POSITIVE (Reason: High entropy but standard path for gradle and not flagged as suspicious)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/native-platform-linux-aarch64-ncurses5-0.22-milestone-26.jar,7.84574,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/native-platform-linux-aarch64-ncurses5-0.22-milestone-26.jar → FALSE POSITIVE (Reason: High entropy but not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/native-platform-osx-amd64-0.22-milestone-26.jar,7.92045,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/native-platform-osx-amd64-0.22-milestone-26.jar → FALSE POSITIVE (Reason: High entropy but standard path for gradle.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/gradle-build-process-services-8.9.jar,7.81801,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/gradle-build-process-services-8.9.jar → FALSE POSITIVE (Reason: High entropy but standard path for gradle, and not flagged as suspicious)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/native-platform-linux-amd64-0.22-milestone-26.jar,7.91198,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/native-platform-linux-amd64-0.22-milestone-26.jar → FALSE POSITIVE (Reason: High entropy but standard path for gradle.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/kotlinx-serialization-json-jvm-1.6.2.jar,7.92837,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/kotlinx-serialization-json-jvm-1.6.2.jar → FALSE POSITIVE (Reason: High entropy but standard path for gradle dependencies and not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/gradle-declarative-dsl-tooling-models-8.9.jar,7.56804,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/gradle-declarative-dsl-tooling-models-8.9.jar → FALSE POSITIVE (Reason: High entropy in a gradle directory, but not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/gradle-messaging-8.9.jar,7.78839,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/gradle-messaging-8.9.jar → FALSE POSITIVE (Reason: High entropy but standard path for gradle library and not flagged as suspicious)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/gradle-client-services-8.9.jar,7.72231,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/gradle-client-services-8.9.jar → FALSE POSITIVE (Reason: High entropy but in a standard application directory and not flagged as suspicious.)
+
+/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/gradle-model-core-8.9.jar,7.85919,No,/home/sandeep/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/gradle-model-core-8.9.jar → FALSE POSITIVE (Reason: High entropy but standard path for gradle and not flagged as suspicious.)
+
