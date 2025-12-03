@@ -64,7 +64,7 @@ string computeSHA256(const string& path) {
     return hexStream.str();
 }
 
-int main(){
+int main(int argc, char* argv[]){
     
     ofstream out("malwarePaths.txt");
     ofstream pathOut("pathsScanned.txt");
@@ -79,11 +79,15 @@ int main(){
     
     // vector<int> v;
     // v.push_back(1);
-
+    if(argc==1){
+        cout<< "Provide path to scan in.!!!"<<endl;
+        return 0;
+    }
+    cout<< "Path selected for scan: "<< argv[1]<< endl;
     auto signatures = loadSignatures("eicar.txt");
     cout<<"Loaded signatures"<<endl;
     int count = 0;
-    for (const auto& entry : fs::recursive_directory_iterator("/home/sandeep/")) {
+    for (const auto& entry : fs::recursive_directory_iterator(argv[1])) {
         if (fs::is_regular_file(entry)) {
             string path = entry.path().string();
             auto hash = computeSHA256(path);

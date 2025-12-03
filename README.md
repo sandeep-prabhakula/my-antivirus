@@ -107,10 +107,10 @@ Heuristic Reason: Obfuscated bash commands
 
 ## 🧱 Roadmap
 
-- [x] Signature-based file scanning
-- [x] YARA heuristic rule scanning
-- [x] YARA rule compiler and optimizer
-- [x] AI-based post-validation (OpenRouter)
+- [✅] Signature-based file scanning
+- [✅] YARA heuristic rule scanning
+- [✅] YARA rule compiler and optimizer
+- [✅] AI-based post-validation (OpenRouter)
 - [ ] Background scan daemon
 - [ ] Real-time system monitoring
 - [ ] Threat dashboard with analytics
